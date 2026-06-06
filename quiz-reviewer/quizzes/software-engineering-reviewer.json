@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes Adaptive/Agile SDLC models?",
+      "options": {
+        "A": "Linear and fixed development models",
+        "B": "Flexible and iterative development approaches",
+        "C": "Hardware maintenance procedures",
+        "D": "Database storage systems"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main goal of Agile SDLC models?",
+      "options": {
+        "A": "Eliminate testing",
+        "B": "Deliver working software quickly and continuously",
+        "C": "Increase documentation only",
+        "D": "Reduce customer involvement"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile principle focuses on customer collaboration?",
+      "options": {
+        "A": "Detailed contracts over communication",
+        "B": "Customer collaboration over contract negotiation",
+        "C": "Following a rigid plan",
+        "D": "Ignoring user feedback"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is an iteration in Agile development?",
+      "options": {
+        "A": "A server installation",
+        "B": "A short development cycle",
+        "C": "A hardware upgrade",
+        "D": "A database backup"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which SDLC model uses short development cycles called sprints?",
+      "options": {
+        "A": "Waterfall",
+        "B": "Scrum",
+        "C": "Spiral",
+        "D": "V-Model"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the usual duration of a Scrum sprint?",
+      "options": {
+        "A": "1–4 weeks",
+        "B": "1 year",
+        "C": "6 months",
+        "D": "24 hours only"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Who is responsible for managing the product backlog in Scrum?",
+      "options": {
+        "A": "Scrum Master",
+        "B": "Developer",
+        "C": "Product Owner",
+        "D": "Tester"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the role of the Scrum Master?",
+      "options": {
+        "A": "To code the entire system alone",
+        "B": "To facilitate the Scrum process",
+        "C": "To replace the Product Owner",
+        "D": "To create databases only"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a product backlog?",
+      "options": {
+        "A": "List of completed tasks",
+        "B": "Collection of project requirements and tasks",
+        "C": "Final documentation",
+        "D": "Hardware inventory"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Scrum meeting is conducted daily?",
+      "options": {
+        "A": "Sprint Review",
+        "B": "Sprint Planning",
+        "C": "Daily Stand-up",
+        "D": "Retrospective"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is discussed during a Daily Stand-up meeting?",
+      "options": {
+        "A": "Company salary",
+        "B": "Progress, plans, and blockers",
+        "C": "Marketing strategies",
+        "D": "Legal contracts"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model focuses on visualizing workflow?",
+      "options": {
+        "A": "Scrum",
+        "B": "Kanban",
+        "C": "RAD",
+        "D": "Crystal"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is commonly used in Kanban to track tasks?",
+      "options": {
+        "A": "Pie chart",
+        "B": "Kanban board",
+        "C": "Spreadsheet",
+        "D": "ER diagram"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Kanban principle limits the number of ongoing tasks?",
+      "options": {
+        "A": "Sprint Planning",
+        "B": "Work in Progress (WIP) limits",
+        "C": "Pair Programming",
+        "D": "Prototyping"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of WIP limits?",
+      "options": {
+        "A": "Increase multitasking",
+        "B": "Improve workflow efficiency",
+        "C": "Remove deadlines",
+        "D": "Increase coding errors"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model focuses on eliminating waste?",
+      "options": {
+        "A": "Lean",
+        "B": "Scrum",
+        "C": "XP",
+        "D": "RAD"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a principle of Lean SDLC?",
+      "options": {
+        "A": "Deliver as late as possible",
+        "B": "Eliminate waste",
+        "C": "Avoid teamwork",
+        "D": "Reduce customer feedback"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In Lean SDLC, what does “waste” refer to?",
+      "options": {
+        "A": "Valuable features",
+        "B": "Unnecessary processes or activities",
+        "C": "Customer requests",
+        "D": "Software testing"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model emphasizes engineering practices and coding quality?",
+      "options": {
+        "A": "XP",
+        "B": "Kanban",
+        "C": "Crystal",
+        "D": "FDD"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does XP stand for?",
+      "options": {
+        "A": "Extended Process",
+        "B": "Extreme Programming",
+        "C": "Extra Planning",
+        "D": "External Programming"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which practice is commonly associated with XP?",
+      "options": {
+        "A": "Pair Programming",
+        "B": "Waterfall planning",
+        "C": "Long documentation",
+        "D": "Sequential testing"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is Pair Programming?",
+      "options": {
+        "A": "Two developers working together on one task",
+        "B": "Two databases connected together",
+        "C": "A testing tool",
+        "D": "A project scheduling method"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which XP practice involves writing tests before coding?",
+      "options": {
+        "A": "Regression Testing",
+        "B": "Test-Driven Development",
+        "C": "Black Box Testing",
+        "D": "Alpha Testing"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main advantage of XP?",
+      "options": {
+        "A": "Faster hardware installation",
+        "B": "Improved software quality and flexibility",
+        "C": "Less customer involvement",
+        "D": "Reduced teamwork"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model focuses on rapid development and prototyping?",
+      "options": {
+        "A": "Scrum",
+        "B": "RAD",
+        "C": "Lean",
+        "D": "Crystal"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does RAD stand for?",
+      "options": {
+        "A": "Rapid Application Development",
+        "B": "Random Agile Design",
+        "C": "Runtime Application Design",
+        "D": "Rapid Agile Deployment"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which feature is most associated with RAD?",
+      "options": {
+        "A": "Extensive planning before development",
+        "B": "Fast prototyping and user feedback",
+        "C": "Fixed requirements only",
+        "D": "No testing process"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a prototype in RAD?",
+      "options": {
+        "A": "Final software release",
+        "B": "Early version of the system for testing and feedback",
+        "C": "Hardware model",
+        "D": "Database schema only"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model is people-centric and focuses on team interaction?",
+      "options": {
+        "A": "Crystal",
+        "B": "Kanban",
+        "C": "Lean",
+        "D": "Waterfall"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which factor determines the type of Crystal methodology used?",
+      "options": {
+        "A": "Internet speed",
+        "B": "Team size and project criticality",
+        "C": "Number of computers",
+        "D": "Office location"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Crystal characteristic emphasizes communication?",
+      "options": {
+        "A": "Frequent interaction among team members",
+        "B": "Long documentation",
+        "C": "Strict hierarchy",
+        "D": "Delayed feedback"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does FDD stand for?",
+      "options": {
+        "A": "Feature Driven Development",
+        "B": "Functional Data Design",
+        "C": "Fast Development Delivery",
+        "D": "Framework Design Development"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main focus of FDD?",
+      "options": {
+        "A": "Delivering features incrementally",
+        "B": "Eliminating all testing",
+        "C": "Database management only",
+        "D": "Hardware optimization"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which activity is commonly performed first in FDD?",
+      "options": {
+        "A": "Build a feature list",
+        "B": "Deploy the system",
+        "C": "Conduct maintenance",
+        "D": "Install hardware"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model is best known for flexibility in changing requirements?",
+      "options": {
+        "A": "Agile models",
+        "B": "Waterfall model",
+        "C": "V-Model",
+        "D": "Big Bang model"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is one major advantage of Agile SDLC models?",
+      "options": {
+        "A": "Faster feedback and adaptation",
+        "B": "Longer development time",
+        "C": "Reduced communication",
+        "D": "Fixed project scope only"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a disadvantage of Agile methods?",
+      "options": {
+        "A": "Difficulty managing changing requirements",
+        "B": "Requires active customer involvement",
+        "C": "No need for communication",
+        "D": "Faster delivery is impossible"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model uses continuous delivery of small improvements?",
+      "options": {
+        "A": "Kanban",
+        "B": "Waterfall",
+        "C": "Spiral",
+        "D": "Prototype model"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In Scrum, what happens during Sprint Review?",
+      "options": {
+        "A": "Team members resign",
+        "B": "Completed work is demonstrated to stakeholders",
+        "C": "Coding standards are removed",
+        "D": "Hardware is replaced"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Scrum event focuses on improving team processes?",
+      "options": {
+        "A": "Sprint Planning",
+        "B": "Sprint Retrospective",
+        "C": "Daily Stand-up",
+        "D": "Product Demo"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of Sprint Planning?",
+      "options": {
+        "A": "To assign salaries",
+        "B": "To define tasks for the upcoming sprint",
+        "C": "To finalize deployment only",
+        "D": "To replace the Scrum Master"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile methodology is best suited for projects requiring rapid changes?",
+      "options": {
+        "A": "Agile SDLC",
+        "B": "Waterfall SDLC",
+        "C": "Linear SDLC",
+        "D": "Sequential SDLC"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model is highly visual and easy to manage?",
+      "options": {
+        "A": "Kanban",
+        "B": "RAD",
+        "C": "XP",
+        "D": "Crystal"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which methodology emphasizes “working software over comprehensive documentation”?",
+      "options": {
+        "A": "Agile Manifesto",
+        "B": "Waterfall principle",
+        "C": "Spiral model",
+        "D": "V-Model"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is incremental delivery in Agile?",
+      "options": {
+        "A": "Delivering software in small usable parts",
+        "B": "Delivering hardware components",
+        "C": "Delivering documentation only",
+        "D": "Delivering all features at once"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model encourages sustainable development pace?",
+      "options": {
+        "A": "XP",
+        "B": "Waterfall",
+        "C": "V-Model",
+        "D": "Prototype"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is continuous integration in XP?",
+      "options": {
+        "A": "Combining code changes regularly into a shared repository",
+        "B": "Delaying testing activities",
+        "C": "Installing hardware repeatedly",
+        "D": "Writing documentation manually"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Agile model is most suitable for highly interactive customer feedback?",
+      "options": {
+        "A": "RAD",
+        "B": "Waterfall",
+        "C": "Spiral",
+        "D": "Big Bang"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are Agile methodologies popular in software development?",
+      "options": {
+        "A": "They adapt quickly to changes and user needs",
+        "B": "They avoid teamwork",
+        "C": "They eliminate coding",
+        "D": "They require no testing"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the overall objective of Adaptive/Agile SDLC models?",
+      "options": {
+        "A": "To create flexible, efficient, and customer-focused software development",
+        "B": "To remove customer participation",
+        "C": "To avoid software updates",
+        "D": "To focus only on documentation"
+      },
+      "correctAnswer": "A"
+    }
+  ]
+}

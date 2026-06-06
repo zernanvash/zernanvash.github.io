@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of an arithmetic operator?",
+      "options": {
+        "A": "&&",
+        "B": "+",
+        "C": ">=",
+        "D": "=="
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main purpose of arithmetic expressions?",
+      "options": {
+        "A": "To compare values",
+        "B": "To perform mathematical calculations",
+        "C": "To repeat statements",
+        "D": "To store files"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which operator is used for division in most programming languages?",
+      "options": {
+        "A": "%",
+        "B": "/",
+        "C": "*",
+        "D": "//"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the result of the expression 10 % 3?",
+      "options": {
+        "A": "3",
+        "B": "1",
+        "C": "0",
+        "D": "10"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a relational operator?",
+      "options": {
+        "A": "+",
+        "B": "&&",
+        "C": "<",
+        "D": "="
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Relational expressions usually return what type of value?",
+      "options": {
+        "A": "Integer",
+        "B": "Decimal",
+        "C": "Boolean",
+        "D": "Character"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which symbol represents “equal to” in programming?",
+      "options": {
+        "A": "=",
+        "B": "==",
+        "C": "!=",
+        "D": "<="
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What will the expression 5 > 3 evaluate to?",
+      "options": {
+        "A": "False",
+        "B": "Error",
+        "C": "True",
+        "D": "Null"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Boolean operator means “AND”?",
+      "options": {
+        "A": "||",
+        "B": "!",
+        "C": "&&",
+        "D": "=="
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the result of TRUE && FALSE?",
+      "options": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NULL",
+        "D": "ERROR"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Boolean operator means “OR”?",
+      "options": {
+        "A": "||",
+        "B": "&&",
+        "C": "!",
+        "D": "=="
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the NOT operator (!) do?",
+      "options": {
+        "A": "Adds values",
+        "B": "Multiplies values",
+        "C": "Reverses a Boolean value",
+        "D": "Compares values"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of a Boolean expression?",
+      "options": {
+        "A": "5 + 2",
+        "B": "x = 10",
+        "C": "7 < 9",
+        "D": "print(\"Hello\")"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a control structure in programming?",
+      "options": {
+        "A": "A type of database",
+        "B": "A mechanism that controls program flow",
+        "C": "A computer virus",
+        "D": "A programming language"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which are the three basic control structures?",
+      "options": {
+        "A": "Input, Process, Output",
+        "B": "Sequence, Selection, Iteration",
+        "C": "Variable, Constant, Operator",
+        "D": "Compile, Execute, Debug"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which control structure executes statements one after another?",
+      "options": {
+        "A": "Selection",
+        "B": "Iteration",
+        "C": "Sequence",
+        "D": "Branching"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of assignment statements?",
+      "options": {
+        "A": "To compare values",
+        "B": "To assign values to variables",
+        "C": "To stop loops",
+        "D": "To create functions"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which symbol is commonly used for assignment?",
+      "options": {
+        "A": "==",
+        "B": "=",
+        "C": "&&",
+        "D": "!="
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What will happen in the statement x = 5?",
+      "options": {
+        "A": "x is compared to 5",
+        "B": "x is assigned the value 5",
+        "C": "x becomes FALSE",
+        "D": "x is deleted"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a valid assignment statement?",
+      "options": {
+        "A": "10 = x",
+        "B": "x == 10",
+        "C": "x = 10",
+        "D": "x != 10"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a compound statement?",
+      "options": {
+        "A": "A single statement only",
+        "B": "Multiple statements grouped together",
+        "C": "A Boolean expression",
+        "D": "A looping condition"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which symbols are commonly used to define compound statements in many languages?",
+      "options": {
+        "A": "[]",
+        "B": "<>",
+        "C": "{}",
+        "D": "//"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement is used to make decisions in programming?",
+      "options": {
+        "A": "Loop statement",
+        "B": "Selection statement",
+        "C": "Assignment statement",
+        "D": "Arithmetic statement"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which keyword is commonly used for branching?",
+      "options": {
+        "A": "if",
+        "B": "loop",
+        "C": "print",
+        "D": "int"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is branching in programming?",
+      "options": {
+        "A": "Repeating statements continuously",
+        "B": "Choosing different execution paths",
+        "C": "Declaring variables",
+        "D": "Ending the program"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement is an example of a branching statement?",
+      "options": {
+        "A": "if-else",
+        "B": "for loop",
+        "C": "while loop",
+        "D": "do-while loop"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of an if statement?",
+      "options": {
+        "A": "To repeat instructions",
+        "B": "To execute code based on a condition",
+        "C": "To declare variables",
+        "D": "To create files"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement executes when the if condition is FALSE?",
+      "options": {
+        "A": "switch",
+        "B": "else",
+        "C": "break",
+        "D": "continue"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement allows multiple choices based on a variable value?",
+      "options": {
+        "A": "if",
+        "B": "switch",
+        "C": "while",
+        "D": "do-while"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which control structure repeats a set of statements?",
+      "options": {
+        "A": "Selection",
+        "B": "Branching",
+        "C": "Iteration",
+        "D": "Assignment"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is another term for iterative statements?",
+      "options": {
+        "A": "Decision statements",
+        "B": "Looping statements",
+        "C": "Arithmetic statements",
+        "D": "Branch statements"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which loop is guaranteed to execute at least once?",
+      "options": {
+        "A": "for loop",
+        "B": "while loop",
+        "C": "do-while loop",
+        "D": "nested loop"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which loop is best used when the number of repetitions is known?",
+      "options": {
+        "A": "while loop",
+        "B": "do-while loop",
+        "C": "for loop",
+        "D": "infinite loop"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which loop continues as long as a condition is TRUE?",
+      "options": {
+        "A": "while loop",
+        "B": "switch statement",
+        "C": "if statement",
+        "D": "assignment statement"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What happens if a loop condition never becomes FALSE?",
+      "options": {
+        "A": "The program stops immediately",
+        "B": "Syntax error occurs",
+        "C": "Infinite loop occurs",
+        "D": "Variable is deleted"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which keyword is used to terminate a loop immediately?",
+      "options": {
+        "A": "continue",
+        "B": "break",
+        "C": "return",
+        "D": "stop"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the continue statement do?",
+      "options": {
+        "A": "Stops the loop completely",
+        "B": "Skips the current iteration and continues the loop",
+        "C": "Restarts the program",
+        "D": "Deletes the loop variable"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement combines multiple conditions?",
+      "options": {
+        "A": "Compound conditional statement",
+        "B": "Assignment statement",
+        "C": "Arithmetic statement",
+        "D": "Output statement"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is nested iteration?",
+      "options": {
+        "A": "A loop inside another loop",
+        "B": "A condition inside an assignment",
+        "C": "A variable inside a function",
+        "D": "A branch inside a comment"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a selection statement?",
+      "options": {
+        "A": "if-else",
+        "B": "while",
+        "C": "for",
+        "D": "do-while"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which expression evaluates to TRUE?",
+      "options": {
+        "A": "10 < 5",
+        "B": "7 == 7",
+        "C": "3 > 8",
+        "D": "2 != 2"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the result of !(TRUE)?",
+      "options": {
+        "A": "TRUE",
+        "B": "FALSE",
+        "C": "NULL",
+        "D": "ERROR"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which operator is used for “not equal to”?",
+      "options": {
+        "A": "==",
+        "B": "<=",
+        "C": "!=",
+        "D": ">="
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement is used to execute one block among many choices?",
+      "options": {
+        "A": "for",
+        "B": "switch",
+        "C": "while",
+        "D": "continue"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of statement is “x = y + 5”?",
+      "options": {
+        "A": "Selection statement",
+        "B": "Assignment statement",
+        "C": "Iterative statement",
+        "D": "Branching statement"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which control structure is represented by “if-else”?",
+      "options": {
+        "A": "Sequence",
+        "B": "Iteration",
+        "C": "Selection",
+        "D": "Assignment"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the output type of a Boolean expression?",
+      "options": {
+        "A": "Character",
+        "B": "Decimal",
+        "C": "TRUE or FALSE",
+        "D": "Integer only"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement helps organize multiple instructions as one block?",
+      "options": {
+        "A": "Compound statement",
+        "B": "Arithmetic statement",
+        "C": "Relational statement",
+        "D": "Assignment statement"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are control structures important in programming?",
+      "options": {
+        "A": "They increase file size",
+        "B": "They manage the flow of execution",
+        "C": "They replace variables",
+        "D": "They prevent calculations"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main function of expressions and statements in programming?",
+      "options": {
+        "A": "To define program logic and operations",
+        "B": "To replace hardware",
+        "C": "To increase internet speed",
+        "D": "To create operating systems"
+      },
+      "correctAnswer": "A"
+    }
+  ]
+}

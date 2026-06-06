@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which example best represents continuous improvement in Information Assurance?",
+      "options": {
+        "A": "Ignoring old security policies",
+        "B": "Regularly updating security controls and procedures",
+        "C": "Disabling security monitoring tools",
+        "D": "Allowing all devices into the network"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of access control policies?",
+      "options": {
+        "A": "To decorate office computers",
+        "B": "To determine who can access specific information and resources",
+        "C": "To improve typing speed",
+        "D": "To reduce printer usage"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes risk mitigation in information assurance?",
+      "options": {
+        "A": "Ignoring possible threats to save costs",
+        "B": "Reducing the impact or likelihood of risks",
+        "C": "Eliminating all computer systems",
+        "D": "Increasing system vulnerabilities"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best explains integrity in information assurance?",
+      "options": {
+        "A": "Data remains accurate and unaltered",
+        "B": "Data is hidden from users",
+        "C": "Data is copied to multiple devices",
+        "D": "Data is deleted automatically"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a preventive measure in Information Assurance?",
+      "options": {
+        "A": "Recovering deleted files after an attack",
+        "B": "Installing antivirus software before threats occur",
+        "C": "Reporting incidents after a breach",
+        "D": "Ignoring suspicious emails"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of an information asset?",
+      "options": {
+        "A": "Firewall device",
+        "B": "Customer database",
+        "C": "Office chair",
+        "D": "Air conditioning system"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of a physical security policy?",
+      "options": {
+        "A": "Requiring passwords every 30 days",
+        "B": "Locking server rooms with access cards",
+        "C": "Encrypting emails",
+        "D": "Updating antivirus software"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a characteristic of effective assessment?",
+      "options": {
+        "A": "Unclear objectives",
+        "B": "Bias in scoring",
+        "C": "Alignment with learning outcomes",
+        "D": "Random questioning only"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation shows a violation of information assurance policy?",
+      "options": {
+        "A": "Encrypting confidential files",
+        "B": "Logging out after computer use",
+        "C": "Leaving sensitive documents unattended",
+        "D": "Using multifactor authentication"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes a vulnerability?",
+      "options": {
+        "A": "A protective security policy",
+        "B": "A weakness that can be exploited by threats",
+        "C": "A secure password system",
+        "D": "A type of encrypted database"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why do organizations restrict user access based on job roles?",
+      "options": {
+        "A": "To reduce unnecessary exposure to sensitive information",
+        "B": "To slow employee productivity",
+        "C": "To remove network security",
+        "D": "To increase hacking attempts"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes criterion-referenced evaluation?",
+      "options": {
+        "A": "Students are compared with classmates",
+        "B": "Students are measured against learning standards",
+        "C": "Students are ranked from highest to lowest",
+        "D": "Students compete for rewards"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following assets is most likely targeted during a ransomware attack?",
+      "options": {
+        "A": "Building walls",
+        "B": "Printed posters",
+        "C": "Digital files and databases",
+        "D": "Office lighting systems"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which example best represents a technical countermeasure?",
+      "options": {
+        "A": "Security guard patrols",
+        "B": "Employee orientation seminars",
+        "C": "Antivirus software installation",
+        "D": "Locked office cabinets"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is commonly included in an information assurance policy?",
+      "options": {
+        "A": "Cafeteria menu schedule",
+        "B": "Rules for handling sensitive data",
+        "C": "Office decoration guidelines",
+        "D": "Employee vacation plans"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of policy defines how confidential information should be shared?",
+      "options": {
+        "A": "Communication and Data Handling Policy",
+        "B": "Cleaning Policy",
+        "C": "Attendance Policy",
+        "D": "Printing Policy"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which characteristic ensures that users are truly who they claim to be?",
+      "options": {
+        "A": "Authentication",
+        "B": "Compression",
+        "C": "Backup",
+        "D": "Virtualization"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is classified as a human-related risk?",
+      "options": {
+        "A": "Earthquake damaging servers",
+        "B": "Hardware failure",
+        "C": "Employee accidentally deleting files",
+        "D": "Power interruption"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which characteristic of Information Assurance focuses on keeping data accurate and unaltered?",
+      "options": {
+        "A": "Availability",
+        "B": "Integrity",
+        "C": "Confidentiality",
+        "D": "Authentication"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which assessment method best measures practical skills?",
+      "options": {
+        "A": "Essay test",
+        "B": "Oral recitation",
+        "C": "Performance task",
+        "D": "Multiple-choice test only"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following shows the availability characteristic of Information Assurance?",
+      "options": {
+        "A": "Encrypting files",
+        "B": "Restricting user access",
+        "C": "Ensuring systems are accessible when needed",
+        "D": "Blocking all network traffic"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which policy helps employees create strong passwords?",
+      "options": {
+        "A": "Backup Policy",
+        "B": "Password Policy",
+        "C": "Disposal Policy",
+        "D": "Maintenance Policy"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which action best supports the integrity of information?",
+      "options": {
+        "A": "Sharing passwords",
+        "B": "Editing records without permission",
+        "C": "Using checksums and validation tools",
+        "D": "Turning off firewalls"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation best illustrates a security risk?",
+      "options": {
+        "A": "Employees attending training seminars",
+        "B": "A weak password used for company accounts",
+        "C": "Installing antivirus software",
+        "D": "Performing regular backups"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement best explains diagnostic assessment?",
+      "options": {
+        "A": "It measures learning after instruction",
+        "B": "It identifies students' strengths and weaknesses before instruction",
+        "C": "It is used only for grading",
+        "D": "It replaces quizzes"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of a summative assessment?",
+      "options": {
+        "A": "Classroom discussion",
+        "B": "Final examination",
+        "C": "Daily reflection",
+        "D": "Peer feedback"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement best explains the relationship between assets and risks?",
+      "options": {
+        "A": "Risks exist only when there are valuable assets to protect",
+        "B": "Assets are created to increase risks",
+        "C": "Risks completely eliminate assets",
+        "D": "Assets cannot be affected by threats"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of risk can be reduced through multi-factor authentication?",
+      "options": {
+        "A": "Unauthorized account access",
+        "B": "Hardware failure",
+        "C": "Internet congestion",
+        "D": "Printer malfunction"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A company regularly updates employee passwords every 90 days. What is the main purpose of this action?",
+      "options": {
+        "A": "To improve internet speed",
+        "B": "To reduce unauthorized access risks",
+        "C": "To increase software costs",
+        "D": "To remove hardware components"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary goal of creating data backups?",
+      "options": {
+        "A": "To reduce storage space",
+        "B": "To increase virus infections",
+        "C": "To recover information after data loss",
+        "D": "To make computers slower"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes the goal of an Information Assurance (IA) process?",
+      "options": {
+        "A": "To increase internet speed",
+        "B": "To ensure the confidentiality, integrity, and availability of information",
+        "C": "To create social media content",
+        "D": "To reduce hardware prices"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which characteristic of Information Assurance ensures that data and systems can be recovered after failures?",
+      "options": {
+        "A": "Non-repudiation",
+        "B": "Availability",
+        "C": "Business continuity",
+        "D": "Authentication"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why do organizations conduct regular security training for employees?",
+      "options": {
+        "A": "To reduce human-related security risks",
+        "B": "To eliminate internet access",
+        "C": "To replace security software",
+        "D": "To slow down system operations"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is the best example of a countermeasure against phishing attacks?",
+      "options": {
+        "A": "Using weak passwords",
+        "B": "Ignoring suspicious emails",
+        "C": "Employee cybersecurity awareness training",
+        "D": "Sharing login credentials"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes an asset in information security?",
+      "options": {
+        "A": "A type of malware attack",
+        "B": "Anything valuable to an organization",
+        "C": "A method of encrypting files",
+        "D": "A backup storage device only"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which type of assessment is usually conducted during instruction to monitor learning progress?",
+      "options": {
+        "A": "Summative assessment",
+        "B": "Diagnostic assessment",
+        "C": "Formative assessment",
+        "D": "Placement assessment"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best explains the concept of defense in depth?",
+      "options": {
+        "A": "Using only one strong password",
+        "B": "Applying multiple layers of security controls",
+        "C": "Disconnecting all systems from networks",
+        "D": "Allowing unrestricted access to users"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is software patching important in risk mitigation?",
+      "options": {
+        "A": "It removes all employee responsibilities",
+        "B": "It fixes vulnerabilities that attackers may exploit",
+        "C": "It decreases data storage capacity",
+        "D": "It increases the chance of attacks"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation demonstrates confidentiality?",
+      "options": {
+        "A": "A backup server restoring lost data",
+        "B": "A user accessing only authorized files",
+        "C": "A system remaining online during outages",
+        "D": "A network increasing download speed"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a primary goal of information assurance?",
+      "options": {
+        "A": "Increasing hardware costs",
+        "B": "Protecting confidentiality, integrity, and availability of information",
+        "C": "Reducing employee salaries",
+        "D": "Deleting unnecessary files"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which assessment activity best checks understanding during a lesson?",
+      "options": {
+        "A": "Final project",
+        "B": "Midterm examination",
+        "C": "Short quiz or questioning",
+        "D": "Graduation test"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is considered a physical asset?",
+      "options": {
+        "A": "Employee passwords",
+        "B": "Financial records",
+        "C": "Server computer",
+        "D": "Email messages"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A company installs surge protectors for computers. What risk is being mitigated?",
+      "options": {
+        "A": "Electrical damage to equipment",
+        "B": "Weak passwords",
+        "C": "Data duplication",
+        "D": "Software piracy"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which action best reduces the risk of phishing attacks?",
+      "options": {
+        "A": "Opening unknown email attachments",
+        "B": "Sharing confidential information online",
+        "C": "Verifying email sources before clicking links",
+        "D": "Disabling all security settings"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes an information assurance policy?",
+      "options": {
+        "A": "A guide for computer assembly",
+        "B": "A document that defines rules for protecting information assets",
+        "C": "A software used for encryption",
+        "D": "A method for repairing networks"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is monitoring network activity important in risk mitigation?",
+      "options": {
+        "A": "It helps identify suspicious behavior early",
+        "B": "It decreases storage capacity",
+        "C": "It removes all internet access",
+        "D": "It increases system downtime"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which action best follows an organization's information assurance policy?",
+      "options": {
+        "A": "Sharing passwords with coworkers",
+        "B": "Installing unauthorized software",
+        "C": "Reporting suspicious emails to IT staff",
+        "D": "Ignoring security warnings"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the focus of formative assessment?",
+      "options": {
+        "A": "Ranking students",
+        "B": "Monitoring ongoing learning",
+        "C": "Giving final grades",
+        "D": "Comparing schools"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is considered an authentic assessment?",
+      "options": {
+        "A": "True-or-false test",
+        "B": "Memorization drill",
+        "C": "Portfolio presentation",
+        "D": "Spelling exercise only"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes evaluation in education?",
+      "options": {
+        "A": "Memorizing facts and concepts",
+        "B": "Measuring and judging student performance",
+        "C": "Writing lesson plans",
+        "D": "Delivering classroom lectures"
+      },
+      "correctAnswer": "B"
+    }
+  ]
+}

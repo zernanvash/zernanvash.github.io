@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of identifying organizational assets?",
+      "options": {
+        "A": "To reduce employee workload",
+        "B": "To determine internet speed",
+        "C": "To protect valuable resources from threats",
+        "D": "To increase software installation"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In cybersecurity, risk refers to:",
+      "options": {
+        "A": "The total number of employees in a company",
+        "B": "The possibility of a threat causing harm to an asset",
+        "C": "A software used to monitor networks",
+        "D": "The process of installing updates"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are countermeasures important in information security?",
+      "options": {
+        "A": "They increase internet bandwidth",
+        "B": "They eliminate the need for employees",
+        "C": "They reduce the impact of threats and vulnerabilities",
+        "D": "They replace computer hardware"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A company installs CCTV cameras to monitor entrances and exits. This is an example of:",
+      "options": {
+        "A": "Risk assessment",
+        "B": "Asset identification",
+        "C": "Countermeasure implementation",
+        "D": "Threat exploitation"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main goal of a risk assessment process?",
+      "options": {
+        "A": "To identify and evaluate possible threats to assets",
+        "B": "To install all available software updates",
+        "C": "To increase employee salaries",
+        "D": "To remove all internet access"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What could happen if an organization fails to protect its assets properly?",
+      "options": {
+        "A": "Improved productivity automatically",
+        "B": "Loss of data and financial damage",
+        "C": "Faster internet connection",
+        "D": "Reduced maintenance costs"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why should organizations regularly update their security countermeasures?",
+      "options": {
+        "A": "To make systems more complicated",
+        "B": "Because threats and vulnerabilities continuously evolve",
+        "C": "To remove all employees from the system",
+        "D": "Because hardware cannot function without updates"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of data backup as a countermeasure?",
+      "options": {
+        "A": "To increase malware attacks",
+        "B": "To restore information after data loss or damage",
+        "C": "To slow down computer systems",
+        "D": "To replace all hardware devices"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A company uses multi-factor authentication (MFA) for employee logins. What is the main purpose of this countermeasure?",
+      "options": {
+        "A": "To increase electricity usage",
+        "B": "To simplify hacking attempts",
+        "C": "To improve account security",
+        "D": "To replace user accounts"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is understanding assets, risks, and countermeasures important in information assurance and security?",
+      "options": {
+        "A": "To encourage unauthorized access",
+        "B": "To reduce the need for policies",
+        "C": "To help organizations protect valuable information and systems",
+        "D": "To eliminate all technology use"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is risk management considered a common characteristic of Information Assurance?",
+      "options": {
+        "A": "It eliminates all threats permanently",
+        "B": "It identifies and reduces possible security risks",
+        "C": "It replaces computer hardware",
+        "D": "It only applies to large companies"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does confidentiality mean in an Information Assurance process?",
+      "options": {
+        "A": "Data is available anytime",
+        "B": "Data is shared publicly",
+        "C": "Data is protected from unauthorized access",
+        "D": "Data is deleted regularly"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is continuous monitoring important in Information Assurance?",
+      "options": {
+        "A": "It replaces employees",
+        "B": "It detects and responds to security issues promptly",
+        "C": "It increases electricity consumption",
+        "D": "It slows down the network"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of accountability in Information Assurance?",
+      "options": {
+        "A": "To remove all security policies",
+        "B": "To track user activities and responsibilities",
+        "C": "To increase internet bandwidth",
+        "D": "To prevent software installation"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are policies and procedures important in Information Assurance?",
+      "options": {
+        "A": "They guide users in protecting information assets",
+        "B": "They reduce computer memory",
+        "C": "They eliminate the need for security tools",
+        "D": "They replace operating systems"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What common characteristic of Information Assurance involves restoring systems after disruptions?",
+      "options": {
+        "A": "Recovery",
+        "B": "Encryption",
+        "C": "Authentication",
+        "D": "Auditing"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is auditing important in an Information Assurance process?",
+      "options": {
+        "A": "It helps identify security weaknesses and policy violations",
+        "B": "It increases storage capacity",
+        "C": "It removes all malware instantly",
+        "D": "It upgrades hardware automatically"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What role does user awareness play in Information Assurance?",
+      "options": {
+        "A": "It helps users recognize and avoid security threats",
+        "B": "It decreases system performance",
+        "C": "It replaces security software",
+        "D": "It removes the need for passwords"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main purpose of access control in Information Assurance?",
+      "options": {
+        "A": "To increase internet speed",
+        "B": "To limit access to authorized individuals only",
+        "C": "To reduce software costs",
+        "D": "To allow anonymous users access"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is Information Assurance considered an ongoing process?",
+      "options": {
+        "A": "Technology and threats constantly change",
+        "B": "Security tools never work",
+        "C": "Computers no longer need updates",
+        "D": "Data does not require protection"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are information assurance policies important in an organization?",
+      "options": {
+        "A": "They increase internet speed",
+        "B": "They help protect data and reduce security risks",
+        "C": "They replace antivirus software",
+        "D": "They eliminate the need for employees"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does confidentiality mean in information assurance?",
+      "options": {
+        "A": "Data is available anytime",
+        "B": "Data is accurate and complete",
+        "C": "Information is accessible only to authorized users",
+        "D": "Information is stored in the cloud"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of an acceptable use policy (AUP)?",
+      "options": {
+        "A": "To repair damaged computers",
+        "B": "To explain proper use of organizational technology resources",
+        "C": "To increase internet bandwidth",
+        "D": "To monitor employee attendance"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A security policy requiring regular software updates mainly protects against what?",
+      "options": {
+        "A": "Hardware theft",
+        "B": "Malware and vulnerabilities",
+        "C": "Power interruptions",
+        "D": "Employee promotions"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does availability mean in information assurance?",
+      "options": {
+        "A": "Information can only be viewed by managers",
+        "B": "Information is always encrypted",
+        "C": "Information and systems are accessible when needed",
+        "D": "Information is printed regularly"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why do organizations conduct security awareness training?",
+      "options": {
+        "A": "To teach employees how to build computers",
+        "B": "To help employees understand and follow security policies",
+        "C": "To reduce employee working hours",
+        "D": "To improve gaming performance"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main purpose of a data backup policy?",
+      "options": {
+        "A": "To increase internet speed",
+        "B": "To recover information after data loss or disasters",
+        "C": "To reduce electricity consumption",
+        "D": "To improve monitor resolution"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why should employees follow information assurance policies?",
+      "options": {
+        "A": "To avoid using computers",
+        "B": "To help maintain organizational security and compliance",
+        "C": "To reduce software usage",
+        "D": "To avoid communicating with coworkers"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best describes risk in information assurance?",
+      "options": {
+        "A": "A guaranteed system failure",
+        "B": "A possible threat that can harm information or systems",
+        "C": "A type of software update",
+        "D": "A method for creating websites"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following demonstrates understanding of information assurance policies?",
+      "options": {
+        "A": "Ignoring company guidelines on email security",
+        "B": "Using public Wi-Fi for confidential work without protection",
+        "C": "Following procedures for securing sensitive information",
+        "D": "Sharing company files through personal accounts"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is installing antivirus software considered a risk mitigation strategy?",
+      "options": {
+        "A": "It increases network traffic",
+        "B": "It removes all hardware risks",
+        "C": "It helps prevent malware attacks",
+        "D": "It replaces the operating system"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation demonstrates risk mitigation in a school computer laboratory?",
+      "options": {
+        "A": "Allowing everyone to use administrator accounts",
+        "B": "Ignoring software updates",
+        "C": "Backing up files regularly",
+        "D": "Sharing passwords publicly"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is an example of physical risk mitigation?",
+      "options": {
+        "A": "Installing a firewall",
+        "B": "Encrypting files",
+        "C": "Using CCTV cameras in server rooms",
+        "D": "Updating application software"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of using firewalls in a network?",
+      "options": {
+        "A": "To increase hardware damage",
+        "B": "To monitor and control incoming and outgoing traffic",
+        "C": "To remove operating systems",
+        "D": "To create physical barriers only"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "An organization stores sensitive files in encrypted form. What risk is being mitigated?",
+      "options": {
+        "A": "Unauthorized access to data",
+        "B": "Power interruptions",
+        "C": "Hardware overheating",
+        "D": "Slow internet connection"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following best explains disaster recovery planning?",
+      "options": {
+        "A": "Ignoring emergencies",
+        "B": "Preparing procedures to restore operations after disruptions",
+        "C": "Removing all company files",
+        "D": "Stopping all network activities permanently"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which practice helps mitigate risks caused by natural disasters?",
+      "options": {
+        "A": "Disabling backup systems",
+        "B": "Storing backups in a separate location",
+        "C": "Sharing passwords among employees",
+        "D": "Ignoring emergency procedures"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is the best example of proactive risk mitigation?",
+      "options": {
+        "A": "Repairing systems only after a cyberattack",
+        "B": "Conducting vulnerability assessments regularly",
+        "C": "Ignoring unusual network activities",
+        "D": "Allowing unrestricted access to systems"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement best explains the role of policies in risk mitigation?",
+      "options": {
+        "A": "Policies create additional threats",
+        "B": "Policies provide guidelines for reducing security risks",
+        "C": "Policies eliminate the need for security tools",
+        "D": "Policies replace employee training"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following demonstrates understanding of risk mitigation?",
+      "options": {
+        "A": "Accepting all threats without action",
+        "B": "Applying security controls to reduce possible harm",
+        "C": "Avoiding the use of technology completely",
+        "D": "Ignoring company security policies"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of assessment in learning?",
+      "options": {
+        "A": "To punish students",
+        "B": "To compare teachers",
+        "C": "To gather information about student learning",
+        "D": "To increase homework"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is evaluation important in the teaching-learning process?",
+      "options": {
+        "A": "It replaces instruction",
+        "B": "It determines the effectiveness of learning outcomes",
+        "C": "It removes classroom activities",
+        "D": "It limits student participation"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does a teacher mainly use assessment results for?",
+      "options": {
+        "A": "To entertain students",
+        "B": "To improve instruction and student learning",
+        "C": "To avoid classroom activities",
+        "D": "To shorten lessons"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following tools is commonly used in assessment?",
+      "options": {
+        "A": "Rubric",
+        "B": "Blackboard eraser",
+        "C": "Attendance sheet",
+        "D": "Lesson log only"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation best demonstrates evaluation?",
+      "options": {
+        "A": "A teacher checks attendance",
+        "B": "A teacher judges whether learning objectives were achieved",
+        "C": "A student copies notes",
+        "D": "A student decorates a classroom"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are rubrics useful in assessment?",
+      "options": {
+        "A": "They increase classroom noise",
+        "B": "They provide clear scoring criteria",
+        "C": "They replace all examinations",
+        "D": "They reduce learning objectives"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the relationship between assessment and evaluation?",
+      "options": {
+        "A": "Assessment provides information, while evaluation interprets results",
+        "B": "Evaluation happens before assessment",
+        "C": "They are completely unrelated",
+        "D": "Assessment replaces evaluation"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why should teachers use different assessment methods?",
+      "options": {
+        "A": "To confuse students",
+        "B": "To address different learning styles and abilities",
+        "C": "To reduce participation",
+        "D": "To avoid grading"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does feedback in assessment help students do?",
+      "options": {
+        "A": "Ignore mistakes",
+        "B": "Improve their learning performance",
+        "C": "Avoid classroom participation",
+        "D": "Memorize without understanding"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main goal of educational evaluation?",
+      "options": {
+        "A": "To identify and improve the quality of learning",
+        "B": "To increase school expenses",
+        "C": "To reduce classroom interaction",
+        "D": "To eliminate assignments"
+      },
+      "correctAnswer": "A"
+    }
+  ]
+}
