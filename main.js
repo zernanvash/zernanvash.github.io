@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════
-   ZERNAN VASH ARIVE — PORTFOLIO SCRIPTS
+   ZERNAN VASH ARIVE — PORTFOLIO SCRIPTS (REDESIGN)
    zernanvash.dev
-═══════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════ */
 
 (function () {
   'use strict';
@@ -11,9 +11,9 @@
   function dismissBoot() {
     if (!boot) return;
     boot.style.opacity = '0';
-    setTimeout(() => { boot.style.display = 'none'; }, 650);
+    setTimeout(() => { boot.style.display = 'none'; }, 550);
   }
-  setTimeout(dismissBoot, 2800);
+  setTimeout(dismissBoot, 2600);
   document.addEventListener('keydown', dismissBoot, { once: true });
   document.addEventListener('click', function bootClick() {
     dismissBoot();
@@ -37,25 +37,55 @@
     btn.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(btn.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   });
 
-  /* ── SECTION FADE-IN ON SCROLL ── */
+  /* ── ZSH PROMPT TYPING ANIMATION ── */
+  function typeCmd(el) {
+    const cmd = el.getAttribute('data-cmd') || '';
+    if (!cmd || el.classList.contains('typed-done')) return;
+    el.classList.add('typed-done');
+    el.classList.add('typing-active');
+    
+    let index = 0;
+    el.textContent = '';
+    const interval = setInterval(() => {
+      if (index < cmd.length) {
+        el.textContent += cmd.charAt(index);
+        index++;
+      } else {
+        clearInterval(interval);
+        el.classList.remove('typing-active');
+      }
+    }, 45); // comfortable reading type-speed
+  }
+
+  /* ── SECTION FADE-IN & TYPING ON SCROLL ── */
   const sections = document.querySelectorAll('.section');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
+        
+        // Trigger zsh prompt command typing simulation
+        const cmdEl = entry.target.querySelector('.prompt-cmd');
+        if (cmdEl) {
+          setTimeout(() => { typeCmd(cmdEl); }, 200);
+        }
+        
         obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.06 });
 
   sections.forEach(s => {
-    s.style.transform = 'translateY(18px)';
-    s.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    s.style.transform = 'translateY(16px)';
+    s.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    s.style.opacity = '0'; // hide initially to enable clean fade-in
     obs.observe(s);
   });
 
@@ -74,9 +104,9 @@
           card.style.display = '';
           requestAnimationFrame(() => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
+            card.style.transform = 'translateY(8px)';
             requestAnimationFrame(() => {
-              card.style.transition = 'opacity 0.3s ease, transform 0.3s ease, border-color 0.2s, box-shadow 0.2s';
+              card.style.transition = 'opacity 0.25s ease, transform 0.25s ease, border-color 0.2s, box-shadow 0.2s';
               card.style.opacity = '1';
               card.style.transform = 'translateY(0)';
             });
@@ -99,27 +129,24 @@
 
       if (!message) {
         if (formStatus) {
-          formStatus.textContent = '> ERROR: message field empty.';
-          setTimeout(() => { formStatus.textContent = ''; }, 2500);
+          formStatus.textContent = '[ERROR] message_payload is empty.';
+          formStatus.style.color = 'var(--red-dot)';
+          setTimeout(() => { formStatus.textContent = ''; }, 3000);
         }
         return;
       }
 
       const subject = encodeURIComponent('Portfolio inquiry — Zernan Vash Arive');
-      const body    = encodeURIComponent((name ? name + '\n\n' : '') + message);
+      const body    = encodeURIComponent((name ? 'From: ' + name + '\n\n' : '') + message);
       window.location.href = `mailto:zernanvasharive16@gmail.com?subject=${subject}&body=${body}`;
 
       if (formStatus) {
-        formStatus.textContent = '> OK: opening mail client...';
-        setTimeout(() => { formStatus.textContent = ''; }, 2500);
+        formStatus.textContent = '[OK] launching mail client...';
+        formStatus.style.color = 'var(--blue)';
+        setTimeout(() => { formStatus.textContent = ''; }, 3000);
       }
     });
   }
-
-  /* ── TYPING CURSOR ON ALL PROMPTS ── */
-  // Prompts are rendered initially hidden (opacity 0) via CSS and then
-  // revealed via animation. Nothing extra needed — just make sure each
-  // .prompt is visible after the animation class triggers.
 
   /* ── ACTIVE NAV HIGHLIGHT ON SCROLL ── */
   const navBtns = document.querySelectorAll('.nav-btn');
@@ -134,16 +161,11 @@
         });
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.25 });
 
   sectionIds.forEach(id => {
     const el = document.getElementById(id);
     if (el) navObs.observe(el);
   });
-
-  // Add active nav style dynamically
-  const style = document.createElement('style');
-  style.textContent = `.nav-btn.active { background: var(--blue-faint); border-color: var(--blue); color: var(--white); animation: none; }`;
-  document.head.appendChild(style);
 
 })();
