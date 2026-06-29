@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════
    ZERNAN VASH ARIVE — PORTFOLIO SCRIPTS
    zernanvash.dev
-═══════════════════════════════════════════════ */
+   ═══════════════════════════════════════════════ */
 
 (function () {
   'use strict';
@@ -32,14 +32,112 @@
   setInterval(updateClock, 1000);
   updateClock();
 
+  /* ── TYPEWRITER ANIMATION ── */
+  const words = [
+    "BS Computer Science Student",
+    "DOST-SEI Merit Scholar",
+    "Backend Software Engineer",
+    "Game Developer & Visual Creator"
+  ];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingEl = document.getElementById('typing-text');
+  
+  function type() {
+    if (!typingEl) return;
+    const currentWord = words[wordIndex];
+    if (isDeleting) {
+      typingEl.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingEl.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+    
+    let typeSpeed = isDeleting ? 30 : 60;
+    
+    if (!isDeleting && charIndex === currentWord.length) {
+      typeSpeed = 2000; // Pause at end of word
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      typeSpeed = 500; // Pause before starting next word
+    }
+    
+    setTimeout(type, typeSpeed);
+  }
+  setTimeout(type, 3000); // Start typing after boot finishes
+
   /* ── SMOOTH NAV SCROLL ── */
-  document.querySelectorAll('.nav-btn[href^="#"]').forEach(btn => {
+  document.querySelectorAll('.nav-link, .nav-dir-link, .mobile-nav-link, .scroll-down-btn').forEach(btn => {
     btn.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(btn.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const href = btn.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const navHeight = 60; // top-nav height
+          const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
     });
   });
+
+  /* ── MOBILE NAV MENU TOGGLE ── */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobilePanel = document.getElementById('mobile-panel');
+  if (mobileToggle && mobilePanel) {
+    mobileToggle.addEventListener('click', () => {
+      const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+      mobileToggle.setAttribute('aria-expanded', !isExpanded);
+      mobilePanel.style.display = isExpanded ? 'none' : 'flex';
+    });
+    
+    // Close panel on link click
+    mobilePanel.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobilePanel.style.display = 'none';
+      });
+    });
+  }
+
+  /* ── FLOATING VIEWPORT CONTROLS ── */
+  const btnTop = document.getElementById('btn-scroll-top');
+  const btnBottom = document.getElementById('btn-scroll-bottom');
+  const btnScanlines = document.getElementById('btn-toggle-scanlines');
+  const scanlinesOverlay = document.getElementById('scan-lines');
+
+  if (btnTop) {
+    btnTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (btnBottom) {
+    btnBottom.addEventListener('click', () => {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    });
+  }
+
+  if (btnScanlines && scanlinesOverlay) {
+    btnScanlines.addEventListener('click', () => {
+      scanlinesOverlay.classList.toggle('disabled');
+      if (scanlinesOverlay.classList.contains('disabled')) {
+        btnScanlines.style.borderColor = 'var(--orange-dim)';
+        btnScanlines.style.color = 'var(--orange)';
+      } else {
+        btnScanlines.style.borderColor = 'var(--blue-dim)';
+        btnScanlines.style.color = 'var(--blue)';
+      }
+    });
+  }
 
   /* ── SECTION FADE-IN ON SCROLL ── */
   const sections = document.querySelectorAll('.section');
@@ -51,7 +149,7 @@
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.06 });
+  }, { threshold: 0.05 });
 
   sections.forEach(s => {
     s.style.transform = 'translateY(18px)';
@@ -116,34 +214,27 @@
     });
   }
 
-  /* ── TYPING CURSOR ON ALL PROMPTS ── */
-  // Prompts are rendered initially hidden (opacity 0) via CSS and then
-  // revealed via animation. Nothing extra needed — just make sure each
-  // .prompt is visible after the animation class triggers.
-
   /* ── ACTIVE NAV HIGHLIGHT ON SCROLL ── */
-  const navBtns = document.querySelectorAll('.nav-btn');
-  const sectionIds = ['about', 'skills', 'projects', 'events', 'awards', 'contact'];
+  const navLinks = document.querySelectorAll('.nav-link, .nav-dir-link, .mobile-nav-link');
+  const sectionIds = ['intro', 'about', 'skills', 'projects', 'events', 'awards', 'contact'];
 
   const navObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
-        navBtns.forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('href') === `#${id}`);
+        navLinks.forEach(btn => {
+          const href = btn.getAttribute('href');
+          if (href) {
+            btn.classList.toggle('active', href === `#${id}`);
+          }
         });
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.15 });
 
   sectionIds.forEach(id => {
     const el = document.getElementById(id);
     if (el) navObs.observe(el);
   });
-
-  // Add active nav style dynamically
-  const style = document.createElement('style');
-  style.textContent = `.nav-btn.active { background: var(--blue-faint); border-color: var(--blue); color: var(--white); animation: none; }`;
-  document.head.appendChild(style);
 
 })();
