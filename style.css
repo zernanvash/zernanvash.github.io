@@ -970,7 +970,8 @@ body::after {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--bg);
   border: 2px solid var(--blue);
   box-shadow: 0 0 16px var(--blue-glow);
   transition: transform 0.8s ease-in-out;
