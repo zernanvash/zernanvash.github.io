@@ -169,6 +169,7 @@
   }, { threshold: 0.05 });
 
   sections.forEach(s => {
+    s.style.opacity = '0';
     s.style.transform = 'translateY(18px)';
     s.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     obs.observe(s);
@@ -237,15 +238,18 @@
   const sectionIds = ['intro', 'about', 'skills', 'projects', 'events', 'awards', 'contact'];
 
   const navObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(btn => {
-          const href = btn.getAttribute('href');
-          if (href) {
-            btn.classList.toggle('active', href === `#${id}`);
-          }
-        });
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length === 0) return;
+    // If multiple sections cross the threshold in the same frame, honor
+    // whichever one is most visible rather than whichever came last.
+    const topEntry = visible.reduce((a, b) =>
+      b.intersectionRatio > a.intersectionRatio ? b : a
+    );
+    const id = topEntry.target.getAttribute('id');
+    navLinks.forEach(btn => {
+      const href = btn.getAttribute('href');
+      if (href) {
+        btn.classList.toggle('active', href === `#${id}`);
       }
     });
   }, { threshold: 0.15 });

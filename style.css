@@ -1266,18 +1266,22 @@ body::after {
 
 @media (max-width: 800px) {
   .about-grid        { grid-template-columns: 1fr; }
-  .strength-grid     { grid-template-columns: repeat(2, 1fr); }
-  .skills-grid       { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1100px) {
   .nav-menu {
     display: none;
   }
   .mobile-menu-toggle {
     display: block;
   }
+}
+
+@media (max-width: 720px) {
   .sidebar-column {
+    grid-template-columns: 1fr;
+  }
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 }
