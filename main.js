@@ -6,8 +6,6 @@
 (function () {
   'use strict';
 
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   /* ── BOOT SCREEN ── */
   const boot = document.getElementById('boot');
   function dismissBoot() {
@@ -15,7 +13,7 @@
     boot.style.opacity = '0';
     setTimeout(() => { boot.style.display = 'none'; }, 650);
   }
-  setTimeout(dismissBoot, prefersReducedMotion ? 300 : 2800);
+  setTimeout(dismissBoot, 2800);
   document.addEventListener('keydown', dismissBoot, { once: true });
   document.addEventListener('click', function bootClick() {
     dismissBoot();
@@ -48,10 +46,6 @@
   
   function type() {
     if (!typingEl) return;
-    if (prefersReducedMotion) {
-      typingEl.textContent = words[0];
-      return;
-    }
     const currentWord = words[wordIndex];
     if (isDeleting) {
       typingEl.textContent = currentWord.substring(0, charIndex - 1);
@@ -101,32 +95,16 @@
   if (mobileToggle && mobilePanel) {
     mobileToggle.addEventListener('click', () => {
       const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', String(!isExpanded));
-      mobilePanel.classList.toggle('is-open', !isExpanded);
+      mobileToggle.setAttribute('aria-expanded', !isExpanded);
+      mobilePanel.style.display = isExpanded ? 'none' : 'flex';
     });
-
+    
     // Close panel on link click
     mobilePanel.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
-        mobilePanel.classList.remove('is-open');
+        mobilePanel.style.display = 'none';
       });
-    });
-
-    // Close panel on outside click and on Escape
-    document.addEventListener('click', (e) => {
-      const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
-      if (isOpen && !mobilePanel.contains(e.target) && !mobileToggle.contains(e.target)) {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobilePanel.classList.remove('is-open');
-      }
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileToggle.getAttribute('aria-expanded') === 'true') {
-        mobileToggle.setAttribute('aria-expanded', 'false');
-        mobilePanel.classList.remove('is-open');
-        mobileToggle.focus();
-      }
     });
   }
 
@@ -150,9 +128,14 @@
 
   if (btnScanlines && scanlinesOverlay) {
     btnScanlines.addEventListener('click', () => {
-      const isDisabled = scanlinesOverlay.classList.toggle('disabled');
-      btnScanlines.classList.toggle('is-off', isDisabled);
-      btnScanlines.setAttribute('aria-pressed', String(isDisabled));
+      scanlinesOverlay.classList.toggle('disabled');
+      if (scanlinesOverlay.classList.contains('disabled')) {
+        btnScanlines.style.borderColor = 'var(--orange-dim)';
+        btnScanlines.style.color = 'var(--orange)';
+      } else {
+        btnScanlines.style.borderColor = 'var(--blue-dim)';
+        btnScanlines.style.color = 'var(--blue)';
+      }
     });
   }
 
@@ -169,7 +152,6 @@
   }, { threshold: 0.05 });
 
   sections.forEach(s => {
-    s.style.opacity = '0';
     s.style.transform = 'translateY(18px)';
     s.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     obs.observe(s);
@@ -218,7 +200,6 @@
           formStatus.textContent = '> ERROR: message field empty.';
           setTimeout(() => { formStatus.textContent = ''; }, 2500);
         }
-        document.getElementById('cf-msg')?.focus();
         return;
       }
 
@@ -238,18 +219,15 @@
   const sectionIds = ['intro', 'about', 'skills', 'projects', 'events', 'awards', 'contact'];
 
   const navObs = new IntersectionObserver(entries => {
-    const visible = entries.filter(e => e.isIntersecting);
-    if (visible.length === 0) return;
-    // If multiple sections cross the threshold in the same frame, honor
-    // whichever one is most visible rather than whichever came last.
-    const topEntry = visible.reduce((a, b) =>
-      b.intersectionRatio > a.intersectionRatio ? b : a
-    );
-    const id = topEntry.target.getAttribute('id');
-    navLinks.forEach(btn => {
-      const href = btn.getAttribute('href');
-      if (href) {
-        btn.classList.toggle('active', href === `#${id}`);
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(btn => {
+          const href = btn.getAttribute('href');
+          if (href) {
+            btn.classList.toggle('active', href === `#${id}`);
+          }
+        });
       }
     });
   }, { threshold: 0.15 });
