@@ -6,6 +6,8 @@
 (function () {
   'use strict';
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ── BOOT SCREEN ── */
   const boot = document.getElementById('boot');
   function dismissBoot() {
@@ -13,7 +15,7 @@
     boot.style.opacity = '0';
     setTimeout(() => { boot.style.display = 'none'; }, 650);
   }
-  setTimeout(dismissBoot, 2800);
+  setTimeout(dismissBoot, prefersReducedMotion ? 300 : 2800);
   document.addEventListener('keydown', dismissBoot, { once: true });
   document.addEventListener('click', function bootClick() {
     dismissBoot();
@@ -46,6 +48,10 @@
   
   function type() {
     if (!typingEl) return;
+    if (prefersReducedMotion) {
+      typingEl.textContent = words[0];
+      return;
+    }
     const currentWord = words[wordIndex];
     if (isDeleting) {
       typingEl.textContent = currentWord.substring(0, charIndex - 1);
@@ -95,16 +101,32 @@
   if (mobileToggle && mobilePanel) {
     mobileToggle.addEventListener('click', () => {
       const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-      mobileToggle.setAttribute('aria-expanded', !isExpanded);
-      mobilePanel.style.display = isExpanded ? 'none' : 'flex';
+      mobileToggle.setAttribute('aria-expanded', String(!isExpanded));
+      mobilePanel.classList.toggle('is-open', !isExpanded);
     });
-    
+
     // Close panel on link click
     mobilePanel.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', () => {
         mobileToggle.setAttribute('aria-expanded', 'false');
-        mobilePanel.style.display = 'none';
+        mobilePanel.classList.remove('is-open');
       });
+    });
+
+    // Close panel on outside click and on Escape
+    document.addEventListener('click', (e) => {
+      const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+      if (isOpen && !mobilePanel.contains(e.target) && !mobileToggle.contains(e.target)) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobilePanel.classList.remove('is-open');
+      }
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileToggle.getAttribute('aria-expanded') === 'true') {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobilePanel.classList.remove('is-open');
+        mobileToggle.focus();
+      }
     });
   }
 
@@ -128,14 +150,9 @@
 
   if (btnScanlines && scanlinesOverlay) {
     btnScanlines.addEventListener('click', () => {
-      scanlinesOverlay.classList.toggle('disabled');
-      if (scanlinesOverlay.classList.contains('disabled')) {
-        btnScanlines.style.borderColor = 'var(--orange-dim)';
-        btnScanlines.style.color = 'var(--orange)';
-      } else {
-        btnScanlines.style.borderColor = 'var(--blue-dim)';
-        btnScanlines.style.color = 'var(--blue)';
-      }
+      const isDisabled = scanlinesOverlay.classList.toggle('disabled');
+      btnScanlines.classList.toggle('is-off', isDisabled);
+      btnScanlines.setAttribute('aria-pressed', String(isDisabled));
     });
   }
 
@@ -200,6 +217,7 @@
           formStatus.textContent = '> ERROR: message field empty.';
           setTimeout(() => { formStatus.textContent = ''; }, 2500);
         }
+        document.getElementById('cf-msg')?.focus();
         return;
       }
 
