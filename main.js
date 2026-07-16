@@ -10,10 +10,15 @@
   const boot = document.getElementById('boot');
   function dismissBoot() {
     if (!boot) return;
+    sessionStorage.setItem('portfolioBootSeen', 'true');
     boot.style.opacity = '0';
     setTimeout(() => { boot.style.display = 'none'; }, 650);
   }
-  setTimeout(dismissBoot, 2800);
+  if (sessionStorage.getItem('portfolioBootSeen') === 'true') {
+    boot.style.display = 'none';
+  } else {
+    setTimeout(dismissBoot, 2200);
+  }
   document.addEventListener('keydown', dismissBoot, { once: true });
   document.addEventListener('click', function bootClick() {
     dismissBoot();
@@ -31,6 +36,27 @@
   }
   setInterval(updateClock, 1000);
   updateClock();
+
+  /* Scroll progress + ambient pointer */
+  const progress = document.getElementById('scroll-progress');
+  const ambientCursor = document.getElementById('ambient-cursor');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function updateProgress() {
+    if (!progress) return;
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${scrollable > 0 ? window.scrollY / scrollable : 0})`;
+  }
+  updateProgress();
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  if (ambientCursor && !reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+    window.addEventListener('pointermove', (event) => {
+      ambientCursor.style.setProperty('--pointer-x', `${event.clientX}px`);
+      ambientCursor.style.setProperty('--pointer-y', `${event.clientY}px`);
+      ambientCursor.classList.add('is-visible');
+    }, { passive: true });
+  }
 
   /* ── TYPEWRITER ANIMATION ── */
   const words = [
@@ -68,7 +94,7 @@
     
     setTimeout(type, typeSpeed);
   }
-  setTimeout(type, 3000); // Start typing after boot finishes
+  setTimeout(type, sessionStorage.getItem('portfolioBootSeen') === 'true' ? 300 : 2300);
 
   /* ── SMOOTH NAV SCROLL ── */
   document.querySelectorAll('.nav-link, .nav-dir-link, .mobile-nav-link, .scroll-down-btn').forEach(btn => {
@@ -156,6 +182,18 @@
     s.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     obs.observe(s);
   });
+
+  /* Magic UI-inspired pointer spotlight for interactive surfaces */
+  if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('.project-card, .strength-card, .skill-block, .widget, .terminal-card').forEach(card => {
+      card.classList.add('spotlight-surface');
+      card.addEventListener('pointermove', event => {
+        const rect = card.getBoundingClientRect();
+        card.style.setProperty('--spot-x', `${event.clientX - rect.left}px`);
+        card.style.setProperty('--spot-y', `${event.clientY - rect.top}px`);
+      }, { passive: true });
+    });
+  }
 
   /* ── PROJECT FILTER ── */
   const filterBtns = document.querySelectorAll('.filter-btn');
