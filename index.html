@@ -1,650 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zernan Vash — CS Student, Backend Engineer, Game Developer, DOST-SEI Scholar">
-<meta property="og:title" content="ZERNAN VASH :: PORTFOLIO">
-<meta property="og:description" content="Backend engineering, game development, blockchain & cybersecurity.">
-<meta property="og:url" content="https://zernanvash.dev">
-<title>ZERNAN VASH :: PORTFOLIO</title>
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zernan Vash Arive is a creative technologist focused on cybersecurity and software engineering.">
+  <meta name="theme-color" content="#05070a">
+  <meta property="og:title" content="Zernan Vash Arive — Creative Technologist">
+  <meta property="og:description" content="Cybersecurity, software engineering, games, and visual media — connected through building.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zernanvash.dev">
+  <title>Zernan Vash Arive — Creative Technologist</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-circle" aria-hidden="true"></div>
 
-<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-<div class="ambient-cursor" id="ambient-cursor" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- BOOT SCREEN -->
-<div id="boot" role="status" aria-live="polite">
-  <div class="boot-line" style="animation-delay:0s">BIOS v2.7.4 · zernanvash.dev SYSTEM INIT</div>
-  <div class="boot-line" style="animation-delay:0.25s">Loading kernel modules <span class="boot-dots">...</span></div>
-  <div class="boot-line hi" style="animation-delay:0.55s">DOST-SEI SCHOLAR NODE AUTHENTICATED ✓</div>
-  <div class="boot-line" style="animation-delay:0.85s">Mounting: /backend  /gamedev  /blockchain  /ctf</div>
-  <div class="boot-line warn" style="animation-delay:1.1s">WARNING: Caffeine levels critical. Proceeding anyway.</div>
-  <div class="boot-line hi" style="animation-delay:1.45s">PORTFOLIO READY — press any key or wait<span class="cursor"></span></div>
-</div>
-
-<!-- SCAN LINE OVERLAY -->
-<div class="scan-line-overlay" id="scan-lines" aria-hidden="true"></div>
-
-<!-- STICKY TOP NAVBAR -->
-<nav class="top-nav" id="top-nav" aria-label="Primary navigation">
-  <div class="nav-container">
-    <a class="nav-brand" href="#top">
-      <span class="brand-pid">zernanvash.dev</span><span class="pid-tag">//PID-0xKaiz0</span>
-    </a>
-    <div class="nav-menu" id="nav-menu">
-      <a class="nav-link" href="#about">./about</a>
-      <a class="nav-link" href="#skills">./skills</a>
-      <a class="nav-link" href="#projects">./projects</a>
-      <a class="nav-link" href="artworks/">./artworks</a>
-      <a class="nav-link" href="#events">./events</a>
-      <a class="nav-link" href="#awards">./awards</a>
-      <a class="nav-link" href="#contact">./contact</a>
-    </div>
-    <div class="nav-right">
-      <span id="clock">--:--:--</span>
-      <!-- Hamburger Menu for mobile -->
-      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <!-- Mobile dropdown panel -->
-  <div class="mobile-nav-panel" id="mobile-panel">
-    <a class="mobile-nav-link" href="#about">./about</a>
-    <a class="mobile-nav-link" href="#skills">./skills</a>
-    <a class="mobile-nav-link" href="#projects">./projects</a>
-    <a class="mobile-nav-link" href="artworks/">./artworks</a>
-    <a class="mobile-nav-link" href="#events">./events</a>
-    <a class="mobile-nav-link" href="#awards">./awards</a>
-    <a class="mobile-nav-link" href="#contact">./contact</a>
-  </div>
-</nav>
-
-<!-- HERO BANNER -->
-<header class="hero-banner" id="top">
-  <div class="hero-banner-content">
-    <div class="hero-kicker"><span class="status-pulse"></span> AVAILABLE FOR INTERNSHIPS <span class="hero-kicker-sep">/</span> DAGUPAN, PH</div>
-    <!-- GLITCH TITLE -->
-    <div class="ascii-name" data-text="ZERNAN VASH">ZERNAN VASH</div>
-    <div class="ascii-divider">─────────────────────────────────────────────────────</div>
-    <!-- DYNAMIC TYPING SUBTITLE -->
-    <div class="hero-subtitle">
-      <span class="subtitle-prompt">zernanvash@dev:~$</span> <span id="typing-text"></span><span class="cursor"></span>
-    </div>
-    <p class="hero-lede">I engineer reliable backends and expressive game systems&mdash;from award-winning Web3 products to self-training AI and real-time graphics.</p>
-    <div class="hero-actions">
-      <a class="hero-cta hero-cta-primary" href="#projects">Explore selected work <span aria-hidden="true">&darr;</span></a>
-      <a class="hero-cta" href="#contact">Start a conversation <span aria-hidden="true">&nearr;</span></a>
-    </div>
-    <!-- SOCIAL LINKS -->
-    <div class="hero-social-row">
-      <a class="hero-social-icon" href="mailto:zernanvasharive16@gmail.com" title="Email"><span class="icon-text">[EMAIL]</span></a>
-      <a class="hero-social-icon" href="https://github.com/zernanvash" target="_blank" rel="noopener" title="GitHub"><span class="icon-text">[GITHUB]</span></a>
-      <a class="hero-social-icon" href="https://linkedin.com/in/zernan-vash-arive-a1ba27344" target="_blank" rel="noopener" title="LinkedIn"><span class="icon-text">[LINKEDIN]</span></a>
-    </div>
-  </div>
-  <!-- BOUNCING DOWN ARROW -->
-  <a class="scroll-down-btn" href="#main-container" aria-label="Scroll to content">
-    <svg class="arrow-icon" viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M12 5v14M19 12l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
-    </svg>
-  </a>
-</header>
-
-<!-- MAIN WRAPPER -->
-<div class="main-container" id="main-container">
-  
-  <!-- LEFT COLUMN: CONTENT -->
-  <main class="content-column" id="main-content">
-
-    <!-- ─── INTRO / SYSTEM SNAPSHOT ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ fastfetch --profile<span class="cursor"></span></div>
-    
-    <section class="section intro-section" id="intro">
-      <div class="terminal-card">
-        <div class="fastfetch-panel" aria-label="Portfolio snapshot">
-          <pre class="fastfetch-mark">_____      
-/__  /      
-  / /       
- / /__      
-/____/</pre>
-          <div class="fetch-groups">
-            <div class="fetch-box fetch-blue">
-              <div class="fetch-title">HARDWARE</div>
-              <div class="fetch-row"><span>CPU</span><strong>CS Student / Backend Engineer</strong></div>
-              <div class="fetch-row"><span>GPU</span><strong>Game Logic + Visual Systems</strong></div>
-              <div class="fetch-row"><span>RAM</span><strong>CTF, Algorithms, Data Models</strong></div>
-            </div>
-            <div class="fetch-box fetch-orange">
-              <div class="fetch-title">SOFTWARE</div>
-              <div class="fetch-row"><span>OS</span><strong>Universidad de Dagupan</strong></div>
-              <div class="fetch-row"><span>PKGS</span><strong>Go, PHP, Java, C++, JS, SQL</strong></div>
-              <div class="fetch-row"><span>MODE</span><strong>Building for internships</strong></div>
-            </div>
-          </div>
-        </div>
-        
-        <p class="hero-summary">Backend engineer, game developer, and visual systems builder. I turn ideas into working products with clean architecture, sharp interfaces, and proof that survives outside the classroom.</p>
-        
-        <div class="hero-chips">
-          <span class="chip">Backend Eng</span>
-          <span class="chip">Game Dev</span>
-          <span class="chip">Blockchain</span>
-          <span class="chip">CTF / Security</span>
-          <span class="chip chip-accent">Open to Internships</span>
-        </div>
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="monogram" href="#top" aria-label="Zernan Vash Arive, home">ZA</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#visuals">Visuals</a>
       </div>
-    </section>
+      <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-    <!-- ─── ABOUT ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ cat about.md<span class="cursor"></span></div>
-    
-    <section class="section" id="about">
-      <div class="terminal-card">
-        <div class="section-header">ABOUT</div>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>I build <span class="hl-o">useful software</span>, then show the work. CS student at Universidad de Dagupan specializing in <span class="hl-b">backend engineering</span>, <span class="hl-b">game development</span>, and software design. I design robust data models, write high-performance logic, and structure real-time game systems.</p>
-            <p style="margin-top:12px;">DOST-SEI Merit Scholar. Hackathon champion. CTF competitor. I apply deep system-level insights and defensive practices to harden backend applications. Clean code, meaningful projects, measurable results.</p>
-          </div>
-          <div class="about-stats">
-            <div class="stat-row"><span class="stat-label">STATUS</span><span class="stat-val stat-green">● ACTIVE · Seeking Internships</span></div>
-            <div class="stat-row"><span class="stat-label">FOCUS</span><span class="stat-val">Backend &amp; Game Logic</span></div>
-            <div class="stat-row"><span class="stat-label">STACK</span><span class="stat-val">PHP · C++ · Java · JS · SQL · Go</span></div>
-            <div class="stat-row"><span class="stat-label">SCHOLAR</span><span class="stat-val stat-orange">DOST-SEI Merit Scholar</span></div>
-            <div class="stat-row"><span class="stat-label">LOCATION</span><span class="stat-val">Dagupan City, Pangasinan 2400, PH</span></div>
-          </div>
-        </div>
-        <div class="strength-grid">
-          <div class="strength-card">
-            <div class="strength-icon">[01]</div>
-            <div class="strength-title">Backend Systems</div>
-            <div>Robust SQLite/MySQL schemas, REST APIs, local state sync, and mock-test engines.</div>
-          </div>
-          <div class="strength-card">
-            <div class="strength-icon">[02]</div>
-            <div class="strength-title">Game Development</div>
-            <div>Self-training MENACE AIs, RPG progression metrics, custom mechanics, OpenGL pipelines.</div>
-          </div>
-          <div class="strength-card">
-            <div class="strength-icon">[03]</div>
-            <div class="strength-title">Software Engineering</div>
-            <div>Design patterns, comprehensive test coverage, and performance-optimized algorithms.</div>
-          </div>
-          <div class="strength-card">
-            <div class="strength-icon">[04]</div>
-            <div class="strength-title">Cybersecurity</div>
-            <div>CTF jeopardy-style competitions: binary analysis, reverse engineering, exploit scripting.</div>
-          </div>
-        </div>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <img src="src/cosmicnight.webp" alt="">
       </div>
-    </section>
-
-    <!-- ─── SKILLS ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ ls skills/<span class="cursor"></span></div>
-    
-    <section class="section" id="skills">
-      <div class="terminal-card">
-        <div class="section-header">TECHNICAL SKILLS</div>
-        <div class="skills-grid">
-          <div class="skill-block">
-            <div class="skill-cat">Backend &amp; Web</div>
-            <div class="skill-tags">
-              <span class="tag">Go</span><span class="tag">PHP</span><span class="tag">Laravel</span>
-              <span class="tag">Node.js</span><span class="tag">REST API</span>
-              <span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">Git</span>
-            </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-grid shell">
+        <div class="hero-copy" data-reveal>
+          <p class="kicker"><span></span> Dagupan City, Philippines</p>
+          <h1 id="hero-title">Zernan Vash<br><em class="decode-text" data-text="Arive.">Arive.</em></h1>
+          <p class="hero-role">Creative technologist focused on cybersecurity and software engineering.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#work">View selected work</a>
+            <a class="text-link" href="#about">More about me <span aria-hidden="true">↓</span></a>
           </div>
-          <div class="skill-block">
-            <div class="skill-cat">Programming</div>
-            <div class="skill-tags">
-              <span class="tag">Python</span><span class="tag">JavaScript</span>
-              <span class="tag">Java</span><span class="tag">C/C++</span>
-              <span class="tag">Solidity</span><span class="tag">x86 ASM</span><span class="tag">Luau</span>
+        </div>
+        <div class="hero-console-container" data-reveal>
+          <div class="console-card">
+            <div class="console-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="console-title">zernanvash@udd:~</span>
             </div>
-          </div>
-          <div class="skill-block">
-            <div class="skill-cat">Blockchain</div>
-            <div class="skill-tags">
-              <span class="tag">Web3.js</span><span class="tag">Viction</span>
-              <span class="tag">Smart Contracts</span><span class="tag">NFTs</span>
-              <span class="tag">Utility Tokens</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <div class="skill-cat">Security</div>
-            <div class="skill-tags">
-              <span class="tag">CTF</span><span class="tag">Web Exploit</span>
-              <span class="tag">Rev. Eng.</span><span class="tag">Binary Exploit</span>
-              <span class="tag">Steganography</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <div class="skill-cat">Networking &amp; Systems</div>
-            <div class="skill-tags">
-              <span class="tag">TCP/IP</span><span class="tag">Subnetting</span>
-              <span class="tag">Cisco PT</span><span class="tag">Linux Admin</span>
-              <span class="tag">CCNA</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <div class="skill-cat">Game &amp; 3D</div>
-            <div class="skill-tags">
-              <span class="tag">Unity</span><span class="tag">OpenGL</span>
-              <span class="tag">Roblox/Luau</span><span class="tag">Blender</span>
+            <div class="console-body">
+              <p class="console-line"><span class="prompt">$</span> systemctl status profile</p>
+              <p class="console-output text-success">● zernan-vash-profile.service - Creative Technologist Active</p>
+              <p class="console-line"><span class="prompt">$</span> cat focus.json</p>
+              <pre class="console-json">{
+  <span class="json-key">"identity"</span>: <span class="json-val">"Zernan Vash Arive"</span>,
+  <span class="json-key">"status"</span>: <span class="json-val">"BSCS student & freelancer"</span>,
+  <span class="json-key">"focus"</span>: [<span class="json-val">"cybersecurity"</span>, <span class="json-val">"software_engineering"</span>],
+  <span class="json-key">"tools"</span>: [<span class="json-val">"Go"</span>, <span class="json-val">"Solidity"</span>, <span class="json-val">"Roblox/Luau"</span>, <span class="json-val">"Blender"</span>]
+}</pre>
+              <p class="console-line"><span class="prompt">$</span> tail -n 3 security_logs.log</p>
+              <div class="console-logs">
+                <p>[OK] viction_node_listener: block #1842091 synced</p>
+                <p>[OK] packet_analyzer: interface eth0 listening...</p>
+                <p>[OK] lua_runtime: garbage collection complete (1.2ms)</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- ─── PROJECTS ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ cat projects/ --detail<span class="cursor"></span></div>
-    
-    <section class="section" id="projects">
-      <div class="terminal-card">
-        <div class="section-header">PROJECTS</div>
-
-        <!-- Filter buttons -->
-        <div class="proj-filters">
-          <button class="filter-btn active" data-filter="all">ALL</button>
-          <button class="filter-btn" data-filter="backend">BACKEND DEV</button>
-          <button class="filter-btn" data-filter="software">SOFTWARE DEV</button>
-          <button class="filter-btn" data-filter="gamedev">GAME DEV</button>
-        </div>
-
-        <div class="projects-list-wrapper">
-          <!-- Project 01: JuanDerQuest -->
-          <div class="project-card" data-category="backend">
-            <div class="project-header">
-              <div class="project-num">01</div>
-              <div class="project-badge badge-orange">BLOCKCHAIN HACKATHON · 1ST PLACE</div>
-            </div>
-            <div class="project-title">JuanDerQuest</div>
-            <div class="project-stack">Go · Solidity · SQLite · REST API · Web3.js · Viction</div>
-            <ul class="project-desc">
-              <li>Designed backend API endpoints, SQLite data models, and reward logic for a gamified mobile ecotourism app with token, XP, and soulbound NFT flows.</li>
-              <li>Developed Viction smart contract features for utility token distribution and NFT badges tied to verified eco-actions.</li>
-              <li>Built during a 24-hour blockchain hackathon — <span class="hl-o">1st Place at Hack the Chain 25.2</span>.</li>
-            </ul>
-            <div class="project-tags">
-              <span class="ptag">Go</span><span class="ptag">Solidity</span><span class="ptag">Web3.js</span><span class="ptag">NFT</span><span class="ptag">REST API</span>
-            </div>
-          </div>
-
-          <!-- Project 02: LvlUp -->
-          <div class="project-card" data-category="backend">
-            <div class="project-header">
-              <div class="project-num">02</div>
-              <div class="project-badge badge-blue">LIVE DEMO AVAILABLE</div>
-            </div>
-            <div class="project-title"><a href="https://lvlup-v7yh.onrender.com/" target="_blank" rel="noopener">LvlUp — Gamified KMS ↗</a></div>
-            <div class="project-stack">Laravel 12 · PHP · MySQL · Puppeteer · Alpine.js</div>
-            <ul class="project-desc">
-              <li>Implemented XP scaling, login streak multipliers, achievement triggers, and recursive skill-tree dependencies.</li>
-              <li>Designed relational database structures for skill trees, achievements, and user progression data.</li>
-              <li>Integrated headless Chrome PDF pipeline via Puppeteer and Spatie Browsershot for A4 resume exports.</li>
-            </ul>
-            <div class="project-terminal">
-              <div class="pt-row"><span>Level Progress</span><strong>Lv. 42 (Active Hero)</strong></div>
-              <div class="pt-row"><span>Active Quest</span><strong>Compile Milestones</strong></div>
-              <div class="pt-row"><span>Resume Gen</span><strong>Auto Markdown/PDF</strong></div>
-            </div>
-            <div class="project-tags">
-              <span class="ptag">PHP</span><span class="ptag">Laravel</span><span class="ptag">MySQL</span><span class="ptag">Resume Gen</span>
-            </div>
-          </div>
-
-          <!-- Project 03: Quiz Reviewer -->
-          <div class="project-card" data-category="software">
-            <div class="project-header">
-              <div class="project-num">03</div>
-              <div class="project-badge badge-blue">DEPLOYED · LIVE</div>
-            </div>
-            <div class="project-title"><a href="https://zernanvash.dev/quiz-reviewer/" target="_blank" rel="noopener">Quiz Reviewer App ↗</a></div>
-            <div class="project-stack">JavaScript · HTML5 · CSS3 · Local Storage</div>
-            <ul class="project-desc">
-              <li>Mock-up style quiz reviewer application custom-built and deployed for a college block to practice and prepare for examinations.</li>
-              <li>Features interactive multiple-choice testing, timed mode, and score logging.</li>
-            </ul>
-            <div class="project-tags">
-              <span class="ptag">JavaScript</span><span class="ptag">HTML5</span><span class="ptag">State Mgmt</span><span class="ptag">Interactive UI</span>
-            </div>
-          </div>
-
-          <!-- Project 04: Tic-Tac-Toe MENACE -->
-          <div class="project-card" data-category="gamedev">
-            <div class="project-header">
-              <div class="project-num">04</div>
-              <div class="project-badge badge-orange">AI / GAME THEORY</div>
-            </div>
-            <div class="project-title"><a href="https://github.com/zernanvash/tic-tac-toe" target="_blank" rel="noopener">Tic-Tac-Toe (MENACE AI) ↗</a></div>
-            <div class="project-stack">Java · AI Concepts · Game Theory · Swing</div>
-            <ul class="project-desc">
-              <li>Custom Java game inspired by the mechanical matchbox machine-learning model (MENACE). Implements self-training reinforcement learning that adjusts move weight distributions dynamically based on win/loss feedback.</li>
-            </ul>
-            <div class="project-tags">
-              <span class="ptag">Java</span><span class="ptag">Reinforcement Learning</span><span class="ptag">Game Tree AI</span>
-            </div>
-          </div>
-
-          <!-- Project 05: Numerical Method Solver -->
-          <div class="project-card" data-category="software">
-            <div class="project-header">
-              <div class="project-num">05</div>
-              <div class="project-badge badge-blue">OPEN SOURCE</div>
-            </div>
-            <div class="project-title"><a href="https://github.com/zernanvash/numerical-method-solver" target="_blank" rel="noopener">Numerical Method Solver ↗</a></div>
-            <div class="project-stack">C++ · Qt Creator · Numerical Methods · CMake</div>
-            <ul class="project-desc">
-              <li>Interactive desktop application built in C++ and Qt to solve root-finding equations and initial value problems (ODEs) step-by-step.</li>
-              <li>Features dynamic plotting, Newton-Raphson tangent lines, RK4 simulations, and report exports.</li>
-            </ul>
-            <div class="project-terminal">
-              <div class="pt-row"><span>Equation</span><strong>dy/dt = -0.07*(y - 25)</strong></div>
-              <div class="pt-row"><span>Method</span><strong>RK4 (Runge-Kutta)</strong></div>
-              <div class="pt-row"><span>Iteration 3</span><strong>y = 78.435, t = 3.0</strong></div>
-            </div>
-            <div class="project-tags">
-              <span class="ptag">C++</span><span class="ptag">Qt</span><span class="ptag">Algorithm Design</span><span class="ptag">Math Simulations</span>
-            </div>
-          </div>
-
-          <!-- Project 06: Night Shift -->
-          <div class="project-card" data-category="gamedev">
-            <div class="project-header">
-              <div class="project-num">06</div>
-              <div class="project-badge badge-orange">PUBLISHED ON ROBLOX</div>
-            </div>
-            <div class="project-title"><a href="https://www.roblox.com/games/89279983871745" target="_blank" rel="noopener">Night Shift: Universidad ↗</a></div>
-            <div class="project-stack">Luau · Roblox Studio · Game Design · 3D Modeling · Blender</div>
-            <ul class="project-desc">
-              <li>Retro-inspired psychological exploration horror game on Roblox. Players act as a night shift janitor completing checklist chores in an empty university campus.</li>
-              <li>Navigates surreal environmental anomalies, impossible architecture, and atmospheric audio/light events with VHS filter and GodRays.</li>
-            </ul>
-            <div class="project-tags">
-              <span class="ptag">Luau</span><span class="ptag">Roblox Studio</span><span class="ptag">Atmospheric FX</span><span class="ptag">3D Modeling</span>
-            </div>
-          </div>
-
-          <!-- Project 07: Graphics Engine -->
-          <div class="project-card" data-category="gamedev">
-            <div class="project-header">
-              <div class="project-num">07</div>
-              <div class="project-badge badge-blue">LOW-LEVEL SYSTEMS</div>
-            </div>
-            <div class="project-title">Graphics Engine &amp; Interactive Systems</div>
-            <div class="project-stack">Java · OpenGL · Luau · Unity · Roblox · Blender</div>
-            <ul class="project-desc">
-              <li>Built Java/OpenGL rendering with matrix transforms, shader pipelines, and real-time input handling.</li>
-              <li>Designed Roblox multiplayer mechanics with network replication, collision handling, and gameplay scripting.</li>
-              <li>Created and optimized low-poly 3D assets in Blender for stable real-time performance.</li>
-            </ul>
-            <div class="project-tags">
-              <span class="ptag">OpenGL</span><span class="ptag">Matrix Transforms</span><span class="ptag">Shaders</span><span class="ptag">Blender</span>
-            </div>
-          </div>
-        </div>
-
+      <div class="hero-index shell" aria-hidden="true">
+        <span>Portfolio / 2026</span>
+        <span>Scroll to explore</span>
       </div>
     </section>
 
-    <!-- ─── EVENTS ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ cat events.log<span class="cursor"></span></div>
-    
-    <section class="section" id="events">
-      <div class="terminal-card">
-        <div class="section-header">EVENTS &amp; COMPETITIONS</div>
-        <ul class="event-list">
-          <li><span class="event-icon">[NET]</span><span><span class="event-name">APJC NetAcad Riders 2026</span> — Cisco regional networking and troubleshooting tournament.</span></li>
-          <li><span class="event-icon">[IT] </span><span><span class="event-name">13th TOPCIT Philippines</span> — Practical IT competency assessment covering software engineering and databases.</span></li>
-          <li><span class="event-icon">[CTF]</span><span><span class="event-name">Trend Micro University CTF</span> — Global virtual cybersecurity CTF involving vulnerability analysis.</span></li>
-          <li><span class="event-icon">[CTF]</span><span><span class="event-name">FIRST CTF for ASEAN Member States</span> — Regional cybersecurity simulation with multi-nation defense challenges.</span></li>
-          <li><span class="event-icon">[CTF]</span><span><span class="event-name">HackForGov 3 Cyber Range &amp; DCODE UDD</span> — Cyber range labs, defensive security simulations, and CTF training.</span></li>
-          <li><span class="event-icon">[UNI]</span><span><span class="event-name">SIKAPTala CS &amp; IT Competition 2023–2025</span> — University representation and workshops on AI, IoT, and robotics.</span></li>
-        </ul>
+    <section class="intro section shell" id="about" aria-labelledby="about-title">
+      <div class="section-mark" data-reveal>
+        <span>01</span>
+        <span>About</span>
       </div>
-    </section>
-
-    <!-- ─── AWARDS ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ cat awards.txt<span class="cursor"></span></div>
-    
-    <section class="section" id="awards">
-      <div class="terminal-card">
-        <div class="section-header">AWARDS &amp; HONORS</div>
-        <ul class="awards-list">
-          <li class="award-item award-gold">
-            <div class="award-rank">🏆</div>
-            <div>
-              <div class="award-title">Champion — Hack the Chain 25.2 <span class="award-year">| 2025</span></div>
-              <div>1st Place in a 24-hour blockchain hackathon for JuanDerQuest.</div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-rank">🥉</div>
-            <div>
-              <div class="award-title">2nd Runner-Up — TIMPUYOG 2025 SDG Innovators' Initiatives <span class="award-year">| 2025</span></div>
-              <div>Recognition at a sustainability and innovation competition.</div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-rank">🥉</div>
-            <div>
-              <div class="award-title">3rd Place — DICT Region 1 HackForGov 4 CTF <span class="award-year">| 2025</span></div>
-              <div>Regional government cybersecurity CTF competition.</div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-rank">★</div>
-            <div>
-              <div class="award-title">Outstanding Student &amp; Academic Excellence Awardee — Universidad de Dagupan <span class="award-year">| 1st Sem AY 2024–2025</span></div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-rank">★</div>
-            <div>
-              <div class="award-title">Academic Excellence Awardee — Universidad de Dagupan <span class="award-year">| 1st Sem AY 2023–2024</span></div>
-            </div>
-          </li>
-          <li class="award-item">
-            <div class="award-rank">★</div>
-            <div>
-              <div class="award-title">DOST-SEI Science &amp; Technology Undergraduate Merit Scholar <span class="award-year">| 2023</span></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ─── CONTACT ─── -->
-    <div class="prompt"><span>zernanvash@dev</span>:~$ open contact.sh<span class="cursor"></span></div>
-    
-    <section class="section" id="contact">
-      <div class="terminal-card">
-        <div class="section-header">CONTACT</div>
-        <div class="contact-panel">
-          <div class="contact-intro">
-            <p>I can send a resume, share repo links, walk through a project, or talk about a system tool or game build. A short message is enough.</p>
-            <div class="contact-links-row">
-              <a class="cta-btn" href="mailto:zernanvasharive16@gmail.com">Send Email ↗</a>
-              <a class="cta-btn cta-secondary" href="https://github.com/zernanvash" target="_blank" rel="noopener">GitHub ↗</a>
-              <a class="cta-btn cta-secondary" href="https://linkedin.com/in/zernan-vash-arive-a1ba27344" target="_blank" rel="noopener">LinkedIn ↗</a>
-            </div>
-          </div>
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-label">Email</div>
-              <div class="contact-val"><a href="mailto:zernanvasharive16@gmail.com">zernanvasharive16@gmail.com</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-label">Website</div>
-              <div class="contact-val"><a href="https://zernanvash.dev" target="_blank">zernanvash.dev</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-val"><a href="https://linkedin.com/in/zernan-vash-arive-a1ba27344" target="_blank">zernan-vash-arive</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-label">GitHub</div>
-              <div class="contact-val"><a href="https://github.com/zernanvash" target="_blank">github.com/zernanvash</a></div>
-            </div>
-            <div class="contact-item" style="grid-column: 1/-1;">
-              <div class="contact-label">Location</div>
-              <div class="contact-val">Dagupan City, Pangasinan 2400, Philippines</div>
-            </div>
-          </div>
-          <!-- Contact Form -->
-          <div class="contact-form-wrap">
-            <div class="contact-form-title">// QUICK MESSAGE</div>
-            <div class="form-field">
-              <label for="cf-name">YOUR NAME</label>
-              <input type="text" id="cf-name" placeholder="Hiring manager, recruiter, or client">
-            </div>
-            <div class="form-field">
-              <label for="cf-msg">MESSAGE</label>
-              <textarea id="cf-msg" placeholder="I would like to see your resume and project links."></textarea>
-            </div>
-            <div class="form-actions">
-              <span class="form-status" id="form-status"></span>
-              <button class="cta-btn" id="send-btn">Prepare Email ↗</button>
-            </div>
-          </div>
+      <div class="intro-copy" data-reveal>
+        <h2 id="about-title" class="decode-trigger">I learn by <em>building</em> and apply what I learn across disciplines.</h2>
+        <div class="intro-detail">
+          <p>I am a Computer Science student at Universidad de Dagupan, graduating in 2027. An early interest in ethical hacking and mathematics led me toward understanding how software works, how it fails, and how it can be built better.</p>
+          <p>I am currently focused on cybersecurity and software engineering. Game development, video editing, and 3D work remain part of the same process: turning technical ideas into things people can use and experience.</p>
         </div>
       </div>
     </section>
 
+    <section class="work section shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading" data-reveal>
+        <div class="section-mark"><span>02</span><span>Selected work</span></div>
+        <h2 id="work-title" class="decode-trigger">Projects that kept<br>growing after the idea.</h2>
+      </div>
+
+      <article class="project project-primary" data-reveal>
+        <div class="project-visual project-juander" aria-hidden="true">
+          <div class="network-grid"></div>
+          <div class="api-console">
+            <div class="api-console-header">
+              <span>API_GATEWAY [ACTIVE]</span>
+              <span class="status-indicator"></span>
+            </div>
+            <div class="api-console-body">
+              <div class="log-entry"><span class="log-time">13:24:02</span> <span class="log-method GET">GET</span> /api/v1/ecotour/rewards <span class="log-status status-200">200 OK</span></div>
+              <div class="log-entry"><span class="log-time">13:24:05</span> <span class="log-method POST">POST</span> /api/v1/viction/mint <span class="log-status status-201">201 Created</span></div>
+              <div class="log-entry"><span class="log-time">13:24:08</span> <span class="log-method SEC">SEC</span> contract.sol: rewardClaimed() <span class="log-status status-200">Verified</span></div>
+            </div>
+          </div>
+          <span class="project-glyph">JQ</span>
+          <span class="visual-caption">Explore / Act / Earn</span>
+        </div>
+        <div class="project-copy">
+          <div class="project-meta"><span>Capstone · Ongoing</span><span>Team of five</span></div>
+          <h3>JuanDerQuest</h3>
+          <p>A gamified ecotourism platform that began as a hackathon project, won Hack the Chain 25.2, and is now being developed into a deployable capstone system.</p>
+          <p class="role"><strong>My part</strong> Backend development for the APIs, data models, reward logic, and connected features behind the experience.</p>
+          <ul class="tags" aria-label="Technologies"><li>Go</li><li>SQLite</li><li>REST API</li><li>Solidity</li><li>Viction</li></ul>
+          <p class="project-note">Champion, Hack the Chain 25.2</p>
+        </div>
+      </article>
+
+      <article class="project project-secondary" data-reveal>
+        <div class="project-copy">
+          <div class="project-meta"><span>Solo project</span><span>Published game</span></div>
+          <h3>Night Shift:<br><em>Universidad</em></h3>
+          <p>A psychological exploration-horror game set in an empty university where routine tasks give way to environmental anomalies.</p>
+          <p class="role"><strong>My part</strong> Everything from game logic and environment design to the 3D models and visual atmosphere.</p>
+          <ul class="tags" aria-label="Technologies"><li>Roblox Studio</li><li>Luau</li><li>Blender</li></ul>
+          <a class="arrow-link" href="https://www.roblox.com/games/89279983871745" target="_blank" rel="noopener">Visit the game <span aria-hidden="true">↗</span></a>
+        </div>
+        <a class="project-visual project-night" href="https://www.roblox.com/games/89279983871745" target="_blank" rel="noopener" aria-label="Open Night Shift: Universidad on Roblox">
+          <div class="cctv-overlay">
+            <div class="cctv-header">
+              <span class="cctv-cam">CAM_02 (COURTYARD)</span>
+              <span class="cctv-rec"><span class="rec-dot"></span>REC</span>
+            </div>
+            <div class="cctv-static"></div>
+            <div class="cctv-time" data-cctv-time>21:28:17</div>
+          </div>
+          <img src="src/brain_error_final.webp" alt="Dark digital artwork with a blue error screen and a central figure">
+          <span class="night-title">NIGHT<br>SHIFT</span>
+          <span class="visual-caption">Universidad / Roblox</span>
+        </a>
+      </article>
+    </section>
+
+    <section class="practice section" aria-labelledby="practice-title">
+      <div class="shell">
+        <div class="section-mark light" data-reveal><span>03</span><span>Current practice</span></div>
+        <div class="practice-head" data-reveal>
+          <h2 id="practice-title" class="decode-trigger">One practice,<br><em>different lenses.</em></h2>
+          <p>I use the discipline each problem calls for, without treating the tools as the identity.</p>
+        </div>
+        <div class="practice-list">
+          <article data-reveal class="practice-card">
+            <div class="practice-top">
+              <span>01</span>
+              <h3>Understand</h3>
+            </div>
+            <p>Cybersecurity helps me examine systems, trace behavior, and find where assumptions break.</p>
+            <div class="practice-code-preview">
+              <pre><code>$ rizin -A target_binary
+[x] Analyze all flags
+[x] Analyze function calls
+[x] Found vulnerability at 0x080484</code></pre>
+            </div>
+            <small>CTFs · Web · Reverse engineering · Networks</small>
+          </article>
+          <article data-reveal class="practice-card">
+            <div class="practice-top">
+              <span>02</span>
+              <h3>Build</h3>
+            </div>
+            <p>Software engineering gives those findings structure through backend logic, data, and reliable interfaces.</p>
+            <div class="practice-code-preview">
+              <pre><code>func main() {
+    db := InitDatabase()
+    r := SetupRouter(db)
+    log.Fatal(r.Run(":8080"))
+}</code></pre>
+            </div>
+            <small>Java · Python · C/C++ · JavaScript · Go · PHP</small>
+          </article>
+          <article data-reveal class="practice-card">
+            <div class="practice-top">
+              <span>03</span>
+              <h3>Shape</h3>
+            </div>
+            <p>Games and visual media turn systems into experiences with interaction, pacing, and atmosphere.</p>
+            <div class="practice-code-preview">
+              <pre><code>local lighting = game:GetService("Lighting")
+lighting.Ambient = Color3.fromRGB(10, 12, 18)
+lighting.OutdoorAmbient = Color3.new(0, 0, 0)</code></pre>
+            </div>
+            <small>Roblox Studio · Blender · Adobe Creative Cloud</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visuals section shell" id="visuals" aria-labelledby="visuals-title">
+      <div class="section-heading visuals-heading" data-reveal>
+        <div class="section-mark"><span>04</span><span>Visual work</span></div>
+        <h2 id="visuals-title" class="decode-trigger">Studies in mood,<br>motion, and <em>form.</em></h2>
+        <p>Selected personal work alongside private freelance and school editing projects.</p>
+      </div>
+      <div class="gallery" data-reveal>
+        <figure class="gallery-wide">
+          <img src="src/cosmicnight.webp" alt="A figure with a glowing screen for a head in a dark room" loading="lazy">
+          <figcaption>Cosmic Night</figcaption>
+          <div class="gallery-overlay"></div>
+        </figure>
+        <figure class="gallery-tall">
+          <img src="src/robot_heart_final.webp" alt="A mechanical hand holding a heart against a bright painted background" loading="lazy">
+          <figcaption>Robot Heart</figcaption>
+          <div class="gallery-overlay"></div>
+        </figure>
+        <figure>
+          <img src="src/BOAT_REFLECTION.webp" alt="An inverted reflection of a person beside a boat" loading="lazy">
+          <figcaption>Boat Reflection</figcaption>
+          <div class="gallery-overlay"></div>
+        </figure>
+      </div>
+      <a class="archive-link" href="artworks/">Open the visual archive <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-orbit" aria-hidden="true"></div>
+      <div class="shell contact-inner" data-reveal>
+        <p class="kicker"><span></span> Open to selected development projects</p>
+        <h2 id="contact-title" class="decode-trigger">Have something worth<br><em>building?</em></h2>
+        <div class="contact-email-wrapper">
+          <button class="contact-email-btn" id="copy-email-btn" aria-label="Copy email address" title="Click to copy email">
+            <span class="email-text">zernanvasharive16@gmail.com</span>
+            <span class="copy-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- RIGHT COLUMN: SIDEBAR -->
-  <aside class="sidebar-column" id="sidebar">
-    
-    <!-- PROFILE WIDGET -->
-    <div class="widget author-widget">
-      <div class="avatar-container">
-        <img class="author-avatar" src="src/avatar.png" alt="Zernan Vash">
-        <div class="avatar-scanline"></div>
-      </div>
-      <h3 class="author-name">Zernan Vash</h3>
-      <p class="author-title">CS Student &amp; Developer</p>
-      <p class="author-subtitle">Universidad de Dagupan</p>
-      
-      <div class="author-stats">
-        <div class="stat-item">
-          <span class="stat-num">7</span>
-          <span class="stat-lbl">Projects</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">6</span>
-          <span class="stat-lbl">Awards</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">30+</span>
-          <span class="stat-lbl">Skills</span>
-        </div>
-      </div>
+  <footer class="footer shell">
+    <p>© <span data-year>2026</span> Zernan Vash Arive</p>
+    <div><a href="https://github.com/zernanvash" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/zernan-vash-arive-a1ba27344" target="_blank" rel="noopener">LinkedIn</a><a href="#top">Back to top ↑</a></div>
+  </footer>
 
-      <a class="sidebar-action-btn" href="#contact">GET IN TOUCH</a>
-      
-      <div class="sidebar-socials">
-        <a href="mailto:zernanvasharive16@gmail.com" title="Email">[✉]</a>
-        <a href="https://github.com/zernanvash" target="_blank" rel="noopener" title="GitHub">[🐙]</a>
-        <a href="https://linkedin.com/in/zernan-vash-arive-a1ba27344" target="_blank" rel="noopener" title="LinkedIn">[in]</a>
-      </div>
-    </div>
-
-    <!-- DIRECTORY MENU WIDGET -->
-    <div class="widget nav-widget">
-      <div class="widget-title">// DIRECTORY</div>
-      <ul class="nav-dir-list">
-        <li><a href="#about" class="nav-dir-link"><span class="dir-icon">📄</span> about.md</a></li>
-        <li><a href="#skills" class="nav-dir-link"><span class="dir-icon">📄</span> skills.log</a></li>
-        <li><a href="#projects" class="nav-dir-link"><span class="dir-icon">📂</span> projects/</a></li>
-        <li><a href="artworks/" class="nav-dir-link"><span class="dir-icon">📂</span> artworks/</a></li>
-        <li><a href="#events" class="nav-dir-link"><span class="dir-icon">📄</span> events.log</a></li>
-        <li><a href="#awards" class="nav-dir-link"><span class="dir-icon">📄</span> awards.txt</a></li>
-        <li><a href="#contact" class="nav-dir-link"><span class="dir-icon">⚙️</span> contact.sh</a></li>
-      </ul>
-    </div>
-
-    <!-- SYSTEM STATS WIDGET -->
-    <div class="widget status-widget">
-      <div class="widget-title">// SYSTEM STATUS</div>
-      <div class="status-row">
-        <span class="status-label">SCHOLAR</span>
-        <span class="status-value stat-orange">DOST-SEI Merit</span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">STATUS</span>
-        <span class="status-value stat-green">● ACTIVE / INTERNSHIPS</span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">LOCATION</span>
-        <span class="status-value">Dagupan City, PH</span>
-      </div>
-      <div class="status-row">
-        <span class="status-label">IP_ADDR</span>
-        <span class="status-value">10.0.0.42</span>
-      </div>
-    </div>
-
-    <!-- TAG CLOUD WIDGET -->
-    <div class="widget tags-widget">
-      <div class="widget-title">// SKILLS CLOUD</div>
-      <div class="tags-cloud">
-        <span class="cloud-tag">Go</span>
-        <span class="cloud-tag">PHP</span>
-        <span class="cloud-tag">Laravel</span>
-        <span class="cloud-tag">Node.js</span>
-        <span class="cloud-tag">MySQL</span>
-        <span class="cloud-tag">SQLite</span>
-        <span class="cloud-tag">Python</span>
-        <span class="cloud-tag">JavaScript</span>
-        <span class="cloud-tag">Java</span>
-        <span class="cloud-tag">C/C++</span>
-        <span class="cloud-tag">Solidity</span>
-        <span class="cloud-tag">Luau</span>
-        <span class="cloud-tag">Unity</span>
-        <span class="cloud-tag">OpenGL</span>
-        <span class="cloud-tag">CTF</span>
-      </div>
-    </div>
-
-  </aside>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-line">╔══════════════════════════════════════════════════════════════╗</div>
-  <div class="footer-content">
-    &copy; 2025 ZERNAN VASH &nbsp;·&nbsp; BS CS @ UNIVERSIDAD DE DAGUPAN &nbsp;·&nbsp; DOST-SEI SCHOLAR
-  </div>
-  <div class="footer-line">╚══════════════════════════════════════════════════════════════╝</div>
-  <div class="footer-eof">EOF &nbsp;<span class="blink">▌</span></div>
-</footer>
-
-<!-- FLOATING CONTROLS -->
-<div class="floating-controls" aria-label="Page navigation controls">
-  <button class="float-btn" id="btn-scroll-top" title="Scroll to Top">
-    <span>▲</span>
-  </button>
-  <button class="float-btn" id="btn-toggle-scanlines" title="Toggle CRT Scanlines">
-    <span>CRT</span>
-  </button>
-  <button class="float-btn" id="btn-scroll-bottom" title="Scroll to Bottom">
-    <span>▼</span>
-  </button>
-</div>
-
-<script src="main.js"></script>
+  <div id="toast" class="toast" aria-live="polite" aria-hidden="true">Email copied to clipboard!</div>
 </body>
 </html>
