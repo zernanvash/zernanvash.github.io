@@ -240,7 +240,7 @@
     }
 
     /* ═══════════════════════════════════════════════════════════════════
-       SCROLLABLE ARCHIVE GRID
+       SCROLLABLE ARCHIVE GRID & CARDS
        ═══════════════════════════════════════════════════════════════════ */
     .archive-grid {
       display: grid;
@@ -256,15 +256,7 @@
       flex-direction: column;
       cursor: pointer;
       position: relative;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .archive-card:hover,
-    .archive-card:focus-visible {
-      transform: translateY(-4px);
-      border-color: var(--border-hover);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.08);
-      outline: none;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s ease, box-shadow 0.6s ease;
     }
 
     .card-media {
@@ -281,12 +273,56 @@
       height: 100%;
       object-fit: cover;
       filter: grayscale(100%) contrast(105%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
+      will-change: filter, transform;
+      /* Silky smooth gradual transition back to grayscale */
+      transition: filter 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .archive-card:hover .card-img {
-      transform: scale(1.04);
-      filter: grayscale(0%) contrast(100%);
+    /* Desktop Hover (Only on pointer/mouse devices) */
+    @media (hover: hover) and (pointer: fine) {
+      .archive-card:hover,
+      .archive-card:focus-visible {
+        transform: translateY(-4px);
+        border-color: var(--border-hover);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.08);
+        outline: none;
+      }
+
+      .archive-card:hover .card-img,
+      .archive-card:focus-visible .card-img {
+        transform: scale(1.04);
+        filter: grayscale(0%) contrast(100%);
+        transition: filter 0.4s ease-out, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+    }
+
+    /* Mobile Scroll Focal Effect (Only on touch / mobile viewport) */
+    @media (hover: none), (max-width: 768px) {
+      .archive-card {
+        transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.75s ease-out, box-shadow 0.75s ease-out;
+      }
+
+      .archive-card .card-img {
+        /* Ultra-smooth, buttery fade back to grayscale when swiped */
+        transition: filter 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .archive-card.in-focus {
+        transform: translateY(-2px);
+        border-color: var(--border-hover);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.9), 0 0 14px rgba(255, 255, 255, 0.08);
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease-out, box-shadow 0.5s ease-out;
+      }
+
+      .archive-card.in-focus .card-img {
+        transform: scale(1.03);
+        filter: grayscale(0%) contrast(100%);
+        /* Responsive colorization on focal entry */
+        transition: filter 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+      }
     }
 
     .card-id-tag {
@@ -663,8 +699,49 @@
 
       let currentFiltered = [...artworks];
       let currentIndex = 0;
+      let cardObserver = null;
 
       if (headerCount) headerCount.textContent = artworks.length;
+
+      function isMobileDevice() {
+        return window.matchMedia("(max-width: 768px), (hover: none) and (pointer: coarse)").matches;
+      }
+
+      // Setup Mobile-only scroll focus observer
+      function setupScrollFocusObserver() {
+        if (cardObserver) {
+          cardObserver.disconnect();
+          cardObserver = null;
+        }
+
+        // On desktop / web view, clean up and do not auto-colorize on scroll
+        if (!isMobileDevice()) {
+          document.querySelectorAll(".archive-card.in-focus").forEach(c => c.classList.remove("in-focus"));
+          return;
+        }
+
+        if (!('IntersectionObserver' in window)) return;
+
+        cardObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-focus");
+            } else {
+              entry.target.classList.remove("in-focus");
+            }
+          });
+        }, {
+          // Focus band in the vertical center of mobile viewport
+          rootMargin: "-20% 0px -20% 0px",
+          threshold: 0.15
+        });
+
+        document.querySelectorAll(".archive-card").forEach(card => {
+          cardObserver.observe(card);
+        });
+      }
+
+      window.addEventListener("resize", setupScrollFocusObserver, { passive: true });
 
       function renderGrid(items) {
         if (!grid) return;
@@ -722,6 +799,9 @@
 
           grid.appendChild(card);
         });
+
+        // Activate mobile-only focal observer
+        setupScrollFocusObserver();
       }
 
       function applyFilter() {
